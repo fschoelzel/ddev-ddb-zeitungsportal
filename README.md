@@ -5,10 +5,10 @@ This repository provides a [DDEV](https://ddev.readthedocs.io/)-based developmen
 ## Quick Start
 
 1. Checkout the repository
-2. ddev start
-3. ddev composer install
-4. ddev import-db -f basic.sql.gz
-5. ddev launch
+1. ddev start
+1. ddev composer install
+1. ddev import-db -f basic.sql
+1. ddev launch
 
 ## URLs
 
@@ -16,7 +16,22 @@ This repository provides a [DDEV](https://ddev.readthedocs.io/)-based developmen
   - User: `admin`
   - Password: `adminslub`
 
+## Other Commands
+
+```bash
+# Import database dump.
+ddev db:import [<file.sql>]
+
+# Cleanup database, delete sessions
+ddev db:cleanup
+
+# Export database dump
+ddev db:export [<file.sql>]
+
+# Cleanup and export
+ddev db:precommit [<file.sql>]
+```
+
 ## Maintainer
 
 typo3@slub-dresden.de
-
