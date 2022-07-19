@@ -7,7 +7,7 @@ This repository provides a [DDEV](https://ddev.readthedocs.io/)-based developmen
 1. Checkout the repository
 1. ddev start
 1. ddev composer install
-1. ddev import-db -f basic.sql
+1. ddev import-db -f basic.sql.gz
 1. ddev launch
 
 ## URLs
