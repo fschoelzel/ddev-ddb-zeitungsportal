@@ -1,5 +1,5 @@
-version: '3.6'
+# version: '3.6'
 services:
   web:
     volumes:
-      - "$HOME/projects/extensions:/var/www/extensions"
+      - "$HOME/projects/extensions/ddb-zeitungsportal/fschoelzel/ddb_kitodo_zeitungsportal:/var/www/extensions/ddb_kitodo_zeitungsportal"
