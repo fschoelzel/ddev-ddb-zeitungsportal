@@ -4,8 +4,62 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3aac6b598fed67616617d00f8c849670",
+    "content-hash": "84a0356f8515e14260d6a0ec6a8f6795",
     "packages": [
+        {
+            "name": "bacon/bacon-qr-code",
+            "version": "2.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Bacon/BaconQrCode.git",
+                "reference": "8674e51bb65af933a5ffaf1c308a660387c35c22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Bacon/BaconQrCode/zipball/8674e51bb65af933a5ffaf1c308a660387c35c22",
+                "reference": "8674e51bb65af933a5ffaf1c308a660387c35c22",
+                "shasum": ""
+            },
+            "require": {
+                "dasprid/enum": "^1.0.3",
+                "ext-iconv": "*",
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "phly/keep-a-changelog": "^2.1",
+                "phpunit/phpunit": "^7 | ^8 | ^9",
+                "spatie/phpunit-snapshot-assertions": "^4.2.9",
+                "squizlabs/php_codesniffer": "^3.4"
+            },
+            "suggest": {
+                "ext-imagick": "to generate QR code images"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "BaconQrCode\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Scholzen 'DASPRiD'",
+                    "email": "mail@dasprids.de",
+                    "homepage": "https://dasprids.de/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "BaconQrCode is a QR code generator for PHP.",
+            "homepage": "https://github.com/Bacon/BaconQrCode",
+            "support": {
+                "issues": "https://github.com/Bacon/BaconQrCode/issues",
+                "source": "https://github.com/Bacon/BaconQrCode/tree/2.0.8"
+            },
+            "time": "2022-12-07T17:46:57+00:00"
+        },
         {
             "name": "caseyamcl/phpoaipmh",
             "version": "v3.3.1",
@@ -69,6 +123,115 @@
                 "source": "https://github.com/caseyamcl/phpoaipmh/tree/v3.3.1"
             },
             "time": "2023-01-27T17:40:27+00:00"
+        },
+        {
+            "name": "christian-riesen/base32",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ChristianRiesen/base32.git",
+                "reference": "2e82dab3baa008e24a505649b0d583c31d31e894"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ChristianRiesen/base32/zipball/2e82dab3baa008e24a505649b0d583c31d31e894",
+                "reference": "2e82dab3baa008e24a505649b0d583c31d31e894",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.17",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^8.5.13 || ^9.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Base32\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Riesen",
+                    "email": "chris.riesen@gmail.com",
+                    "homepage": "http://christianriesen.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Base32 encoder/decoder according to RFC 4648",
+            "homepage": "https://github.com/ChristianRiesen/base32",
+            "keywords": [
+                "base32",
+                "decode",
+                "encode",
+                "rfc4648"
+            ],
+            "support": {
+                "issues": "https://github.com/ChristianRiesen/base32/issues",
+                "source": "https://github.com/ChristianRiesen/base32/tree/1.6.0"
+            },
+            "time": "2021-02-26T10:19:33+00:00"
+        },
+        {
+            "name": "dasprid/enum",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DASPRiD/Enum.git",
+                "reference": "6faf451159fb8ba4126b925ed2d78acfce0dc016"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DASPRiD/Enum/zipball/6faf451159fb8ba4126b925ed2d78acfce0dc016",
+                "reference": "6faf451159fb8ba4126b925ed2d78acfce0dc016",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1 <9.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7 | ^8 | ^9",
+                "squizlabs/php_codesniffer": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DASPRiD\\Enum\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Scholzen 'DASPRiD'",
+                    "email": "mail@dasprids.de",
+                    "homepage": "https://dasprids.de/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP 7.1 enum implementation",
+            "keywords": [
+                "enum",
+                "map"
+            ],
+            "support": {
+                "issues": "https://github.com/DASPRiD/Enum/issues",
+                "source": "https://github.com/DASPRiD/Enum/tree/1.0.5"
+            },
+            "time": "2023-08-25T16:18:39+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -635,27 +798,26 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.25",
+            "version": "3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "0dbf5d78455d4d6a41d186da50adc1122ec066f4"
+                "reference": "e5997fa97e8790cdae03a9cbd5e78e45e3c7bda7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/0dbf5d78455d4d6a41d186da50adc1122ec066f4",
-                "reference": "0dbf5d78455d4d6a41d186da50adc1122ec066f4",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/e5997fa97e8790cdae03a9cbd5e78e45e3c7bda7",
+                "reference": "e5997fa97e8790cdae03a9cbd5e78e45e3c7bda7",
                 "shasum": ""
             },
             "require": {
-                "doctrine/lexer": "^1.0.1",
-                "php": ">=5.5",
-                "symfony/polyfill-intl-idn": "^1.10"
+                "doctrine/lexer": "^1.2|^2",
+                "php": ">=7.2",
+                "symfony/polyfill-intl-idn": "^1.15"
             },
             "require-dev": {
-                "dominicsayers/isemail": "^3.0.7",
-                "phpunit/phpunit": "^4.8.36|^7.5.15",
-                "satooshi/php-coveralls": "^1.0.1"
+                "phpunit/phpunit": "^8.5.8|^9.3.3",
+                "vimeo/psalm": "^4"
             },
             "suggest": {
                 "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
@@ -663,7 +825,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1.x-dev"
+                    "dev-master": "3.0.x-dev"
                 }
             },
             "autoload": {
@@ -691,7 +853,7 @@
             ],
             "support": {
                 "issues": "https://github.com/egulias/EmailValidator/issues",
-                "source": "https://github.com/egulias/EmailValidator/tree/2.1.25"
+                "source": "https://github.com/egulias/EmailValidator/tree/3.2.6"
             },
             "funding": [
                 {
@@ -699,29 +861,29 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-12-29T14:50:06+00:00"
+            "time": "2023-06-01T07:04:22+00:00"
         },
         {
             "name": "enshrined/svg-sanitize",
-            "version": "0.15.4",
+            "version": "0.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/darylldoyle/svg-sanitizer.git",
-                "reference": "e50b83a2f1f296ca61394fe88fbfe3e896a84cf4"
+                "reference": "6a2c069dab3843ca4d887ff09c972fc7033888d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/darylldoyle/svg-sanitizer/zipball/e50b83a2f1f296ca61394fe88fbfe3e896a84cf4",
-                "reference": "e50b83a2f1f296ca61394fe88fbfe3e896a84cf4",
+                "url": "https://api.github.com/repos/darylldoyle/svg-sanitizer/zipball/6a2c069dab3843ca4d887ff09c972fc7033888d0",
+                "reference": "6a2c069dab3843ca4d887ff09c972fc7033888d0",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "ext-libxml": "*",
-                "php": "^7.0 || ^8.0"
+                "php": "^5.6 || ^7.0 || ^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.5 || ^8.5"
+                "phpunit/phpunit": "^5.7 || ^6.5 || ^8.5"
             },
             "type": "library",
             "autoload": {
@@ -742,9 +904,9 @@
             "description": "An SVG sanitizer for PHP",
             "support": {
                 "issues": "https://github.com/darylldoyle/svg-sanitizer/issues",
-                "source": "https://github.com/darylldoyle/svg-sanitizer/tree/0.15.4"
+                "source": "https://github.com/darylldoyle/svg-sanitizer/tree/0.18.0"
             },
-            "time": "2022-02-21T09:13:59+00:00"
+            "time": "2024-02-22T17:51:05+00:00"
         },
         {
             "name": "flow/jsonpath",
@@ -794,37 +956,47 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.5.8",
+            "version": "7.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "a52f0440530b54fa079ce76e8c5d196a42cad981"
+                "reference": "41042bc7ab002487b876a0683fc8dce04ddce104"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/a52f0440530b54fa079ce76e8c5d196a42cad981",
-                "reference": "a52f0440530b54fa079ce76e8c5d196a42cad981",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/41042bc7ab002487b876a0683fc8dce04ddce104",
+                "reference": "41042bc7ab002487b876a0683fc8dce04ddce104",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "guzzlehttp/promises": "^1.0",
-                "guzzlehttp/psr7": "^1.9",
-                "php": ">=5.5",
-                "symfony/polyfill-intl-idn": "^1.17"
+                "guzzlehttp/promises": "^1.5.3 || ^2.0.1",
+                "guzzlehttp/psr7": "^1.9.1 || ^2.5.1",
+                "php": "^7.2.5 || ^8.0",
+                "psr/http-client": "^1.0",
+                "symfony/deprecation-contracts": "^2.2 || ^3.0"
+            },
+            "provide": {
+                "psr/http-client-implementation": "1.0"
             },
             "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.8.2",
                 "ext-curl": "*",
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4 || ^7.0",
-                "psr/log": "^1.1"
+                "php-http/client-integration-tests": "dev-master#2c025848417c1135031fdf9c728ee53d0a7ceaee as 3.0.999",
+                "php-http/message-factory": "^1.1",
+                "phpunit/phpunit": "^8.5.36 || ^9.6.15",
+                "psr/log": "^1.1 || ^2.0 || ^3.0"
             },
             "suggest": {
+                "ext-curl": "Required for CURL handler support",
+                "ext-intl": "Required for Internationalized Domain Name (IDN) support",
                 "psr/log": "Required for using the Log middleware"
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "6.5-dev"
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": false
                 }
             },
             "autoload": {
@@ -877,19 +1049,20 @@
                 }
             ],
             "description": "Guzzle is a PHP HTTP client library",
-            "homepage": "http://guzzlephp.org/",
             "keywords": [
                 "client",
                 "curl",
                 "framework",
                 "http",
                 "http client",
+                "psr-18",
+                "psr-7",
                 "rest",
                 "web service"
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/6.5.8"
+                "source": "https://github.com/guzzle/guzzle/tree/7.8.1"
             },
             "funding": [
                 {
@@ -905,33 +1078,37 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-06-20T22:16:07+00:00"
+            "time": "2023-12-03T20:35:24+00:00"
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.5.3",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "67ab6e18aaa14d753cc148911d273f6e6cb6721e"
+                "reference": "bbff78d96034045e58e13dedd6ad91b5d1253223"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/67ab6e18aaa14d753cc148911d273f6e6cb6721e",
-                "reference": "67ab6e18aaa14d753cc148911d273f6e6cb6721e",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/bbff78d96034045e58e13dedd6ad91b5d1253223",
+                "reference": "bbff78d96034045e58e13dedd6ad91b5d1253223",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5"
+                "php": "^7.2.5 || ^8.0"
             },
             "require-dev": {
-                "symfony/phpunit-bridge": "^4.4 || ^5.1"
+                "bamarni/composer-bin-plugin": "^1.8.2",
+                "phpunit/phpunit": "^8.5.36 || ^9.6.15"
             },
             "type": "library",
+            "extra": {
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": false
+                }
+            },
             "autoload": {
-                "files": [
-                    "src/functions_include.php"
-                ],
                 "psr-4": {
                     "GuzzleHttp\\Promise\\": "src/"
                 }
@@ -968,7 +1145,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/promises/issues",
-                "source": "https://github.com/guzzle/promises/tree/1.5.3"
+                "source": "https://github.com/guzzle/promises/tree/2.0.2"
             },
             "funding": [
                 {
@@ -984,42 +1161,48 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-21T12:31:43+00:00"
+            "time": "2023-12-03T20:19:20+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.9.1",
+            "version": "2.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "e4490cabc77465aaee90b20cfc9a770f8c04be6b"
+                "reference": "45b30f99ac27b5ca93cb4831afe16285f57b8221"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/e4490cabc77465aaee90b20cfc9a770f8c04be6b",
-                "reference": "e4490cabc77465aaee90b20cfc9a770f8c04be6b",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/45b30f99ac27b5ca93cb4831afe16285f57b8221",
+                "reference": "45b30f99ac27b5ca93cb4831afe16285f57b8221",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0",
-                "psr/http-message": "~1.0",
-                "ralouphie/getallheaders": "^2.0.5 || ^3.0.0"
+                "php": "^7.2.5 || ^8.0",
+                "psr/http-factory": "^1.0",
+                "psr/http-message": "^1.1 || ^2.0",
+                "ralouphie/getallheaders": "^3.0"
             },
             "provide": {
+                "psr/http-factory-implementation": "1.0",
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
-                "ext-zlib": "*",
-                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.14 || ^7.5.20 || ^8.5.8 || ^9.3.10"
+                "bamarni/composer-bin-plugin": "^1.8.2",
+                "http-interop/http-factory-tests": "^0.9",
+                "phpunit/phpunit": "^8.5.36 || ^9.6.15"
             },
             "suggest": {
                 "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
             },
             "type": "library",
+            "extra": {
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": false
+                }
+            },
             "autoload": {
-                "files": [
-                    "src/functions_include.php"
-                ],
                 "psr-4": {
                     "GuzzleHttp\\Psr7\\": "src/"
                 }
@@ -1058,6 +1241,11 @@
                     "name": "Tobias Schultze",
                     "email": "webmaster@tubo-world.de",
                     "homepage": "https://github.com/Tobion"
+                },
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com",
+                    "homepage": "https://sagikazarmark.hu"
                 }
             ],
             "description": "PSR-7 message implementation that also provides common utility methods",
@@ -1073,7 +1261,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/1.9.1"
+                "source": "https://github.com/guzzle/psr7/tree/2.6.2"
             },
             "funding": [
                 {
@@ -1089,7 +1277,66 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-04-17T16:00:37+00:00"
+            "time": "2023-12-03T20:05:35+00:00"
+        },
+        {
+            "name": "halaxa/json-machine",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/halaxa/json-machine.git",
+                "reference": "5147f38f74d7ab3e27733e3f3bdabbd2fd28e3fa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/halaxa/json-machine/zipball/5147f38f74d7ab3e27733e3f3bdabbd2fd28e3fa",
+                "reference": "5147f38f74d7ab3e27733e3f3bdabbd2fd28e3fa",
+                "shasum": ""
+            },
+            "require": {
+                "php": "7.0 - 8.3"
+            },
+            "require-dev": {
+                "ext-json": "*",
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "phpstan/phpstan": "^1.10",
+                "phpunit/phpunit": "^8.0"
+            },
+            "suggest": {
+                "ext-json": "To run JSON Machine out of the box without custom decoders.",
+                "guzzlehttp/guzzle": "To run example with GuzzleHttp"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JsonMachine\\": "src/"
+                },
+                "exclude-from-classmap": [
+                    "src/autoloader.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Filip Halaxa",
+                    "email": "filip@halaxa.cz"
+                }
+            ],
+            "description": "Efficient, easy-to-use and fast JSON pull parser",
+            "support": {
+                "issues": "https://github.com/halaxa/json-machine/issues",
+                "source": "https://github.com/halaxa/json-machine/tree/1.1.4"
+            },
+            "funding": [
+                {
+                    "url": "https://ko-fi.com/G2G57KTE4",
+                    "type": "other"
+                }
+            ],
+            "time": "2023-11-28T21:12:40+00:00"
         },
         {
             "name": "helhum/config-loader",
@@ -1150,34 +1397,86 @@
             "time": "2022-02-21T15:32:39+00:00"
         },
         {
-            "name": "helhum/typo3-console",
-            "version": "v6.7.7",
+            "name": "helhum/php-error-reporting",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/TYPO3-Console/TYPO3-Console.git",
-                "reference": "4b7123a8198978b46bd2370c685d44432242a2b3"
+                "url": "https://github.com/helhum/php-error-reporting.git",
+                "reference": "c9f1a0b6fedf7e641bce23b65eeeea946a6f7eb9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-Console/TYPO3-Console/zipball/4b7123a8198978b46bd2370c685d44432242a2b3",
-                "reference": "4b7123a8198978b46bd2370c685d44432242a2b3",
+                "url": "https://api.github.com/repos/helhum/php-error-reporting/zipball/c9f1a0b6fedf7e641bce23b65eeeea946a6f7eb9",
+                "reference": "c9f1a0b6fedf7e641bce23b65eeeea946a6f7eb9",
                 "shasum": ""
             },
             "require": {
-                "helhum/config-loader": ">=0.9 <0.13",
-                "php": ">=7.2",
-                "symfony/console": "^4.4 || ^5.0",
-                "symfony/process": "^4.4 || ^5.0",
-                "typo3/cms-backend": "^10.4.22",
-                "typo3/cms-core": "^10.4.22",
-                "typo3/cms-extbase": "^10.4.22",
-                "typo3/cms-extensionmanager": "^10.4.22",
-                "typo3/cms-fluid": "^10.4.22",
-                "typo3/cms-frontend": "^10.4.22",
-                "typo3/cms-install": "^10.4.22"
+                "php": ">=7.4.1"
             },
-            "conflict": {
-                "doctrine/dbal": "2.13.0 || 2.13.1"
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.2",
+                "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-doctrine": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpstan/phpstan-strict-rules": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ErrorReporting\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Helmut Hummel",
+                    "email": "typo3@helhum.io"
+                }
+            ],
+            "description": "Create ErrorException with clean trace from PHP error handler errors, inspired by Sentry PHP SDK",
+            "homepage": "https://helhum.io",
+            "keywords": [
+                "error reporting",
+                "sentry"
+            ],
+            "support": {
+                "issues": "https://github.com/helhum/php-error-reporting",
+                "source": "https://github.com/helhum/php-error-reporting/tree/v1.0.1"
+            },
+            "time": "2023-01-12T14:49:10+00:00"
+        },
+        {
+            "name": "helhum/typo3-console",
+            "version": "v7.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-Console/TYPO3-Console.git",
+                "reference": "c7575554b9d2162814093e14ec0820838207307d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-Console/TYPO3-Console/zipball/c7575554b9d2162814093e14ec0820838207307d",
+                "reference": "c7575554b9d2162814093e14ec0820838207307d",
+                "shasum": ""
+            },
+            "require": {
+                "composer-runtime-api": "^2.1",
+                "helhum/config-loader": ">=0.9 <0.13",
+                "helhum/php-error-reporting": "^1.0",
+                "php": ">=7.4.1",
+                "symfony/console": "^5.0 || ^6.0",
+                "symfony/process": "^5.0 || ^6.0",
+                "typo3/cms-backend": "^11.5.3 || dev-main",
+                "typo3/cms-core": "^11.5.3 || dev-main",
+                "typo3/cms-extbase": "^11.5.3 || dev-main",
+                "typo3/cms-extensionmanager": "^11.5.3 || dev-main",
+                "typo3/cms-fluid": "^11.5.3 || dev-main",
+                "typo3/cms-frontend": "^11.5.3 || dev-main",
+                "typo3/cms-install": "^11.5.3 || dev-main"
             },
             "replace": {
                 "typo3-ter/typo3-console": "self.version"
@@ -1185,14 +1484,15 @@
             "require-dev": {
                 "nimut/testing-framework": "^6.0.1",
                 "php-parallel-lint/php-parallel-lint": "^1.2",
-                "phpspec/prophecy": "*",
+                "phpspec/prophecy": "^1.15",
                 "phpunit/phpunit": "^8.5.18",
-                "symfony/expression-language": "^4.4 || ^5.0",
-                "symfony/filesystem": "^4.4 || ^5.0",
+                "symfony/expression-language": "^5.0 || ^6.0",
+                "symfony/filesystem": "^5.0 || ^6.0",
                 "typo3-console/create-reference-command": "@dev",
-                "typo3-console/php-server-command": "@dev",
-                "typo3/cms-filemetadata": "^10.4.22",
-                "typo3/cms-reports": "^10.4.22"
+                "typo3-console/sql-command": "@dev",
+                "typo3/cms-filemetadata": "^11.5.3 || dev-main",
+                "typo3/cms-recordlist": "^11.5.3 || dev-main",
+                "typo3/cms-reports": "^11.5.3 || dev-main"
             },
             "bin": [
                 "typo3cms"
@@ -1200,9 +1500,10 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-latest": "6.x-dev"
+                    "dev-main": "7.1.x-dev"
                 },
                 "typo3/cms": {
+                    "ignore-as-root": false,
                     "app-dir": ".Build",
                     "web-dir": ".Build/public"
                 }
@@ -1251,20 +1552,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-01-08T21:22:53+00:00"
+            "time": "2023-01-12T14:26:00+00:00"
         },
         {
             "name": "kitodo/presentation",
-            "version": "v4.1.0",
+            "version": "v5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kitodo/kitodo-presentation.git",
-                "reference": "109c48581f01b08d9529283e7c6ae6bb63441b0a"
+                "reference": "74f6343aded94a58d8811ab36d7ae84a786443b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kitodo/kitodo-presentation/zipball/109c48581f01b08d9529283e7c6ae6bb63441b0a",
-                "reference": "109c48581f01b08d9529283e7c6ae6bb63441b0a",
+                "url": "https://api.github.com/repos/kitodo/kitodo-presentation/zipball/74f6343aded94a58d8811ab36d7ae84a786443b9",
+                "reference": "74f6343aded94a58d8811ab36d7ae84a786443b9",
                 "shasum": ""
             },
             "require": {
@@ -1275,23 +1576,25 @@
                 "ext-libxml": "*",
                 "ext-openssl": "*",
                 "ext-simplexml": "*",
-                "php": "^7.4",
-                "solarium/solarium": "^5.2.0",
-                "typo3/cms-core": "^9.5.31|^10.4.36",
-                "typo3/cms-extbase": "^9.5.31|^10.4.36",
-                "typo3/cms-tstemplate": "^9.5.31|^10.4.36",
+                "php": "7.4 - 8.3",
+                "solarium/solarium": "5.2 - 6.3",
+                "typo3/cms-core": "^10.4.37|^11.5.37",
+                "typo3/cms-extbase": "^10.4.37|^11.5.37",
+                "typo3/cms-tstemplate": "^10.4.37|^11.5.37",
                 "ubl/php-iiif-prezi-reader": "0.3.0"
             },
             "replace": {
                 "typo3-ter/dlf": "self.version"
             },
             "require-dev": {
-                "spatie/phpunit-watcher": "^1.23.0",
-                "typo3/cms-backend": "^9.5.31|^10.4.36",
-                "typo3/cms-fluid": "^9.5.31|^10.4.36",
-                "typo3/cms-fluid-styled-content": "^9.5.31|^10.4.36",
-                "typo3/cms-frontend": "^9.5.31|^10.4.36",
-                "typo3/testing-framework": "^4.15.5|^6.16.7"
+                "phpstan/phpstan": "^1.11.1",
+                "spatie/phpunit-watcher": "^1.23.6",
+                "typo3/cms-backend": "^10.4.37|^11.5.37",
+                "typo3/cms-fluid": "^10.4.37|^11.5.37",
+                "typo3/cms-fluid-styled-content": "^10.4.37|^11.5.37",
+                "typo3/cms-frontend": "^10.4.37|^11.5.37",
+                "typo3/testing-framework": "^6.16.9",
+                "vlucas/phpdotenv": "^5.6.0"
             },
             "type": "typo3-cms-extension",
             "extra": {
@@ -1330,7 +1633,7 @@
                 "issues": "https://github.com/kitodo/kitodo-presentation/issues",
                 "source": "https://github.com/kitodo/kitodo-presentation"
             },
-            "time": "2023-09-01T10:07:13+00:00"
+            "time": "2024-05-31T21:17:16+00:00"
         },
         {
             "name": "lolli42/finediff",
@@ -2262,11 +2565,11 @@
             "dist": {
                 "type": "path",
                 "url": "/var/www/extensions/ddb_kitodo_zeitungsportal",
-                "reference": "7da1d87d738e88fb6749ac00cb44a9f49c7e9652"
+                "reference": "37d2b2e9c19e92519eebe02058a9711b877e4e92"
             },
             "require": {
-                "kitodo/presentation": "^4.1",
-                "typo3/cms-core": "^10.4"
+                "kitodo/presentation": "^5.0",
+                "typo3/cms-core": "^10.4.45|^11.5"
             },
             "type": "typo3-cms-extension",
             "extra": {
@@ -2307,38 +2610,41 @@
         },
         {
             "name": "solarium/solarium",
-            "version": "5.2.0",
+            "version": "6.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solariumphp/solarium.git",
-                "reference": "9208b615cb2ed6f306be6e696431b6b71e4d42db"
+                "reference": "2c3d36d0e35fa88e386c80958b0b106f947fdce1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/9208b615cb2ed6f306be6e696431b6b71e4d42db",
-                "reference": "9208b615cb2ed6f306be6e696431b6b71e4d42db",
+                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/2c3d36d0e35fa88e386c80958b0b106f947fdce1",
+                "reference": "2c3d36d0e35fa88e386c80958b0b106f947fdce1",
                 "shasum": ""
             },
             "require": {
+                "composer-runtime-api": ">=2.0",
                 "ext-json": "*",
-                "php": "^7.1.3",
+                "halaxa/json-machine": "^1.1",
+                "php": "^7.3 || ^8.0",
+                "psr/event-dispatcher": "^1.0",
                 "psr/http-client": "^1.0",
                 "psr/http-factory": "^1.0",
-                "symfony/event-dispatcher": "^4.3 || ^5.0"
+                "symfony/event-dispatcher-contracts": "^1.0 || ^2.0 || ^3.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.16",
-                "guzzlehttp/guzzle": "^3.8 || ^6.2",
-                "nyholm/psr7": "^1.2",
-                "php-coveralls/php-coveralls": "^2.1",
-                "php-http/guzzle6-adapter": "^2.0",
-                "phpunit/phpunit": "^8.0",
-                "squizlabs/php_codesniffer": "^3.4",
-                "symfony/phpunit-bridge": "^5.0",
-                "zendframework/zend-http": "^2.8"
-            },
-            "suggest": {
-                "minimalcode/search": "Query builder compatible with Solarium, allows simplified solr-query handling"
+                "escapestudios/symfony2-coding-standard": "^3.11",
+                "ext-curl": "*",
+                "ext-iconv": "*",
+                "nyholm/psr7": "^1.8",
+                "php-http/guzzle7-adapter": "^1.0",
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpunit/phpunit": "^9.6",
+                "roave/security-advisories": "dev-master",
+                "symfony/event-dispatcher": "^4.3 || ^5.0 || ^6.0"
             },
             "type": "library",
             "autoload": {
@@ -2353,7 +2659,7 @@
             "authors": [
                 {
                     "name": "See GitHub contributors",
-                    "homepage": "https://github.com/basdenooijer/solarium/contributors"
+                    "homepage": "https://github.com/solariumphp/solarium/contributors"
                 }
             ],
             "description": "PHP Solr client",
@@ -2365,9 +2671,9 @@
             ],
             "support": {
                 "issues": "https://github.com/solariumphp/solarium/issues",
-                "source": "https://github.com/solariumphp/solarium/tree/5.x"
+                "source": "https://github.com/solariumphp/solarium/tree/6.3.1"
             },
-            "time": "2020-04-03T22:16:30+00:00"
+            "time": "2023-06-22T14:24:00+00:00"
         },
         {
             "name": "symfony/cache",
@@ -3313,6 +3619,85 @@
             "time": "2024-05-31T14:33:22+00:00"
         },
         {
+            "name": "symfony/lock",
+            "version": "v5.4.40",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/lock.git",
+                "reference": "d96955c9919fa8609b193ba76e9f527776b70176"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/lock/zipball/d96955c9919fa8609b193ba76e9f527776b70176",
+                "reference": "d96955c9919fa8609b193ba76e9f527776b70176",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "psr/log": "^1|^2|^3",
+                "symfony/deprecation-contracts": "^2.1|^3",
+                "symfony/polyfill-php80": "^1.16"
+            },
+            "conflict": {
+                "doctrine/dbal": "<2.13"
+            },
+            "require-dev": {
+                "doctrine/dbal": "^2.13|^3|^4",
+                "predis/predis": "^1.0|^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Lock\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jérémy Derussé",
+                    "email": "jeremy@derusse.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Creates and manages locks, a mechanism to provide exclusive access to a shared resource",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "cas",
+                "flock",
+                "locking",
+                "mutex",
+                "redlock",
+                "semaphore"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/lock/tree/v5.4.40"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-05-31T14:33:22+00:00"
+        },
+        {
             "name": "symfony/mailer",
             "version": "v5.4.40",
             "source": {
@@ -3456,6 +3841,75 @@
             ],
             "support": {
                 "source": "https://github.com/symfony/mime/tree/v5.4.40"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-05-31T14:33:22+00:00"
+        },
+        {
+            "name": "symfony/options-resolver",
+            "version": "v5.4.40",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/options-resolver.git",
+                "reference": "bd1afbde6613a8d6b956115e0e14b196191fd0c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/bd1afbde6613a8d6b956115e0e14b196191fd0c4",
+                "reference": "bd1afbde6613a8d6b956115e0e14b196191fd0c4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/deprecation-contracts": "^2.1|^3",
+                "symfony/polyfill-php73": "~1.0",
+                "symfony/polyfill-php80": "^1.16"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\OptionsResolver\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides an improved replacement for the array_replace PHP function",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "config",
+                "configuration",
+                "options"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/options-resolver/tree/v5.4.40"
             },
             "funding": [
                 {
@@ -4499,6 +4953,76 @@
             "time": "2024-05-31T14:33:22+00:00"
         },
         {
+            "name": "symfony/rate-limiter",
+            "version": "v5.4.40",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/rate-limiter.git",
+                "reference": "b3de902fc83923b9121169ade2453c41d0819110"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/rate-limiter/zipball/b3de902fc83923b9121169ade2453c41d0819110",
+                "reference": "b3de902fc83923b9121169ade2453c41d0819110",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/lock": "^5.2|^6.0",
+                "symfony/options-resolver": "^5.1|^6.0"
+            },
+            "require-dev": {
+                "psr/cache": "^1.0|^2.0|^3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\RateLimiter\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Wouter de Jong",
+                    "email": "wouter@wouterj.nl"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides a Token Bucket implementation to rate limit input and output in your application",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "limiter",
+                "rate-limiter"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/rate-limiter/tree/v5.4.40"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-05-31T14:33:22+00:00"
+        },
+        {
             "name": "symfony/routing",
             "version": "v5.4.40",
             "source": {
@@ -5057,87 +5581,29 @@
             "time": "2022-08-07T14:48:42+00:00"
         },
         {
-            "name": "typo3/cms-about",
-            "version": "v10.4.37",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/TYPO3-CMS/about.git",
-                "reference": "4a80b330164a0067aee96dd438a4bf7cbc785e10"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/about/zipball/4a80b330164a0067aee96dd438a4bf7cbc785e10",
-                "reference": "4a80b330164a0067aee96dd438a4bf7cbc785e10",
-                "shasum": ""
-            },
-            "require": {
-                "typo3/cms-core": "10.4.37"
-            },
-            "conflict": {
-                "typo3/cms": "*"
-            },
-            "type": "typo3-cms-framework",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "10.4.x-dev"
-                },
-                "typo3/cms": {
-                    "Package": {
-                        "partOfFactoryDefault": true
-                    },
-                    "extension-key": "about"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "TYPO3\\CMS\\About\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "TYPO3 Core Team",
-                    "email": "typo3cms@typo3.org",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Shows info about TYPO3, installed extensions and a separate module for available modules.",
-            "homepage": "https://typo3.org",
-            "support": {
-                "chat": "https://typo3.org/help",
-                "docs": "https://docs.typo3.org",
-                "issues": "https://forge.typo3.org",
-                "source": "https://github.com/typo3/typo3"
-            },
-            "time": "2023-04-11T13:10:15+00:00"
-        },
-        {
             "name": "typo3/cms-adminpanel",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/adminpanel.git",
-                "reference": "98604e724ce63c33f310da77ea34f46d36ccbf45"
+                "reference": "01e96cc719092b88ba83ee0b7cf80b64e02c7daa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/adminpanel/zipball/98604e724ce63c33f310da77ea34f46d36ccbf45",
-                "reference": "98604e724ce63c33f310da77ea34f46d36ccbf45",
+                "url": "https://api.github.com/repos/TYPO3-CMS/adminpanel/zipball/01e96cc719092b88ba83ee0b7cf80b64e02c7daa",
+                "reference": "01e96cc719092b88ba83ee0b7cf80b64e02c7daa",
                 "shasum": ""
             },
             "require": {
                 "psr/http-message": "^1.0",
                 "psr/http-server-handler": "^1.0",
                 "psr/http-server-middleware": "^1.0",
-                "symfony/var-dumper": "^4.4 || ^5.0",
-                "typo3/cms-backend": "10.4.37",
-                "typo3/cms-core": "10.4.37",
-                "typo3/cms-fluid": "10.4.37",
-                "typo3/cms-frontend": "10.4.37",
-                "typo3fluid/fluid": "^2.6.10"
+                "symfony/var-dumper": "^5.4",
+                "typo3/cms-backend": "11.5.38",
+                "typo3/cms-core": "11.5.38",
+                "typo3/cms-fluid": "11.5.38",
+                "typo3/cms-frontend": "11.5.38",
+                "typo3fluid/fluid": "^2.7.2"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -5145,7 +5611,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -5174,40 +5640,41 @@
             "homepage": "https://typo3.org",
             "support": {
                 "chat": "https://typo3.org/help",
-                "docs": "https://docs.typo3.org/c/typo3/cms-adminpanel/10.4/en-us/",
+                "docs": "https://docs.typo3.org/c/typo3/cms-adminpanel/11.5/en-us/",
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-backend",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/backend.git",
-                "reference": "55b4bf5bab5734ff88400d1c7b3b97e005dd12fd"
+                "reference": "8466e91522947b77d01efab076928f18674659fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/backend/zipball/55b4bf5bab5734ff88400d1c7b3b97e005dd12fd",
-                "reference": "55b4bf5bab5734ff88400d1c7b3b97e005dd12fd",
+                "url": "https://api.github.com/repos/TYPO3-CMS/backend/zipball/8466e91522947b77d01efab076928f18674659fc",
+                "reference": "8466e91522947b77d01efab076928f18674659fc",
                 "shasum": ""
             },
             "require": {
                 "psr/event-dispatcher": "^1.0",
-                "typo3/cms-core": "10.4.37",
-                "typo3/cms-recordlist": "10.4.37"
+                "typo3/cms-core": "11.5.38",
+                "typo3/cms-recordlist": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
             },
             "replace": {
-                "typo3/cms-context-help": "*",
-                "typo3/cms-cshmanual": "*",
-                "typo3/cms-func-wizards": "*",
-                "typo3/cms-wizard-crpages": "*",
-                "typo3/cms-wizard-sortpages": "*"
+                "typo3/cms-about": "self.version",
+                "typo3/cms-context-help": "self.version",
+                "typo3/cms-cshmanual": "self.version",
+                "typo3/cms-func-wizards": "self.version",
+                "typo3/cms-wizard-crpages": "self.version",
+                "typo3/cms-wizard-sortpages": "self.version"
             },
             "suggest": {
                 "typo3/cms-install": "To generate url to install tool in environment toolbar"
@@ -5215,7 +5682,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -5225,11 +5692,6 @@
                         "partOfMinimalUsableSystem": true
                     },
                     "extension-key": "backend"
-                },
-                "typo3/class-alias-loader": {
-                    "class-alias-maps": [
-                        "Migrations/Code/ClassAliasMap.php"
-                    ]
                 }
             },
             "autoload": {
@@ -5256,24 +5718,24 @@
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-belog",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/belog.git",
-                "reference": "b88e57edbc99e31426cb80a7a297efb4b77a444c"
+                "reference": "9193912a0acf16471fb3833f101c134a57e925f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/belog/zipball/b88e57edbc99e31426cb80a7a297efb4b77a444c",
-                "reference": "b88e57edbc99e31426cb80a7a297efb4b77a444c",
+                "url": "https://api.github.com/repos/TYPO3-CMS/belog/zipball/9193912a0acf16471fb3833f101c134a57e925f5",
+                "reference": "9193912a0acf16471fb3833f101c134a57e925f5",
                 "shasum": ""
             },
             "require": {
-                "typo3/cms-core": "10.4.37"
+                "typo3/cms-core": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -5281,7 +5743,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -5314,24 +5776,24 @@
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-beuser",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/beuser.git",
-                "reference": "bc6ec9fe7dbd636ef30c8d8158105084b162e4a4"
+                "reference": "5ecca9c277ef461c31473f25e642e219fb5c6648"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/beuser/zipball/bc6ec9fe7dbd636ef30c8d8158105084b162e4a4",
-                "reference": "bc6ec9fe7dbd636ef30c8d8158105084b162e4a4",
+                "url": "https://api.github.com/repos/TYPO3-CMS/beuser/zipball/5ecca9c277ef461c31473f25e642e219fb5c6648",
+                "reference": "5ecca9c277ef461c31473f25e642e219fb5c6648",
                 "shasum": ""
             },
             "require": {
-                "typo3/cms-core": "10.4.37"
+                "typo3/cms-core": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -5339,7 +5801,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -5372,24 +5834,24 @@
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-cli",
-            "version": "2.0.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/cms-cli.git",
-                "reference": "215a0bf5c446b4e0b20f4562bbaf3d6215a5ee82"
+                "reference": "d8947732ff5a6dc52829e88cb1c761124475c0e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/cms-cli/zipball/215a0bf5c446b4e0b20f4562bbaf3d6215a5ee82",
-                "reference": "215a0bf5c446b4e0b20f4562bbaf3d6215a5ee82",
+                "url": "https://api.github.com/repos/TYPO3/cms-cli/zipball/d8947732ff5a6dc52829e88cb1c761124475c0e8",
+                "reference": "d8947732ff5a6dc52829e88cb1c761124475c0e8",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0"
+                "php": "^7.0 || ^8.0"
             },
             "bin": [
                 "typo3"
@@ -5403,9 +5865,9 @@
             "homepage": "https://typo3.org",
             "support": {
                 "issues": "https://github.com/TYPO3/cms-cli/issues",
-                "source": "https://github.com/TYPO3/cms-cli/tree/master"
+                "source": "https://github.com/TYPO3/cms-cli/tree/3.1.1"
             },
-            "time": "2018-03-08T20:16:43+00:00"
+            "time": "2023-08-15T10:14:53+00:00"
         },
         {
             "name": "typo3/cms-composer-installers",
@@ -5484,38 +5946,43 @@
         },
         {
             "name": "typo3/cms-core",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/core.git",
-                "reference": "34e4a9807eb365e202773c82dff82038da8966d3"
+                "reference": "a9a8eafba423dc6aa2376e1179f67f782a825d37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/core/zipball/34e4a9807eb365e202773c82dff82038da8966d3",
-                "reference": "34e4a9807eb365e202773c82dff82038da8966d3",
+                "url": "https://api.github.com/repos/TYPO3-CMS/core/zipball/a9a8eafba423dc6aa2376e1179f67f782a825d37",
+                "reference": "a9a8eafba423dc6aa2376e1179f67f782a825d37",
                 "shasum": ""
             },
             "require": {
-                "doctrine/annotations": "^1.7",
-                "doctrine/dbal": "~2.10.0 || ~2.11.2 || ~2.13.1",
-                "doctrine/instantiator": "^1.1",
-                "doctrine/lexer": "^1.0",
-                "egulias/email-validator": "^2.1",
-                "enshrined/svg-sanitize": "^0.15.4",
+                "bacon/bacon-qr-code": "^2.0.4",
+                "christian-riesen/base32": "^1.6",
+                "composer-runtime-api": "^2.1",
+                "doctrine/annotations": "^1.11",
+                "doctrine/dbal": "^2.13.8",
+                "doctrine/event-manager": "^1.0.0",
+                "doctrine/instantiator": "^1.4",
+                "doctrine/lexer": "^1.2.3",
+                "egulias/email-validator": "^3.2.1",
+                "enshrined/svg-sanitize": "^0.18.0",
+                "ext-dom": "*",
                 "ext-json": "*",
                 "ext-libxml": "*",
                 "ext-pcre": "*",
                 "ext-pdo": "*",
                 "ext-session": "*",
                 "ext-xml": "*",
-                "guzzlehttp/guzzle": "^6.5.8",
-                "guzzlehttp/psr7": "^1.8.5",
+                "guzzlehttp/guzzle": "^7.7.0",
+                "guzzlehttp/psr7": "^2.4.3",
                 "lolli42/finediff": "^1.0.1",
                 "masterminds/html5": "^2.7.6",
-                "nikic/php-parser": "^4.10.4",
-                "php": "^7.2",
-                "psr/container": "^1.0",
+                "nikic/php-parser": "^4.13.2",
+                "php": "^7.4 || ^8.0",
+                "psr/container": "^1.1 || ^2.0",
                 "psr/event-dispatcher": "^1.0",
                 "psr/http-client": "^1.0",
                 "psr/http-factory": "^1.0",
@@ -5523,73 +5990,60 @@
                 "psr/http-server-handler": "^1.0",
                 "psr/http-server-middleware": "^1.0",
                 "psr/log": "^1.0",
-                "symfony/config": "^4.4 || ^5.0",
-                "symfony/console": "^4.4 || ^5.0",
-                "symfony/dependency-injection": "^4.4 || ^5.0",
+                "symfony/config": "^5.4",
+                "symfony/console": "^5.4",
+                "symfony/dependency-injection": "^5.4",
                 "symfony/event-dispatcher-contracts": "^1.1 || ^2.0",
-                "symfony/expression-language": "^4.4 || ^5.0",
-                "symfony/filesystem": "^4.4 || ^5.0",
-                "symfony/finder": "^4.4 || ^5.0",
-                "symfony/http-foundation": "^4.4 || ^5.0",
-                "symfony/mailer": "^4.4 || ^5.0",
-                "symfony/mime": "^4.4.16 || ^5.1.8",
-                "symfony/polyfill-intl-icu": "^1.6",
-                "symfony/polyfill-intl-idn": "^1.10",
-                "symfony/polyfill-intl-normalizer": "^1.22",
-                "symfony/polyfill-mbstring": "^1.16",
-                "symfony/polyfill-php73": "^1.16",
-                "symfony/polyfill-php80": "^1.16",
+                "symfony/expression-language": "^5.4",
+                "symfony/filesystem": "^5.4",
+                "symfony/finder": "^5.4",
+                "symfony/http-foundation": "^5.4",
+                "symfony/mailer": "^5.4",
+                "symfony/mime": "^5.4",
+                "symfony/options-resolver": "^5.4",
+                "symfony/polyfill-intl-icu": "^1.23.0",
+                "symfony/polyfill-intl-idn": "^1.23.0",
+                "symfony/polyfill-intl-normalizer": "^1.27",
+                "symfony/polyfill-mbstring": "^1.23.1",
+                "symfony/polyfill-php80": "^1.23.1",
                 "symfony/polyfill-php81": "^1.23",
-                "symfony/routing": "^4.4 || ^5.0",
-                "symfony/yaml": "^4.4 || ^5.0",
-                "typo3/class-alias-loader": "^1.0",
-                "typo3/cms-cli": "^2.0",
-                "typo3/cms-composer-installers": "^2.0 || ^3.0",
-                "typo3/html-sanitizer": "^2.1.1",
+                "symfony/rate-limiter": "^5.4.8",
+                "symfony/routing": "^5.4",
+                "symfony/yaml": "^5.4",
+                "typo3/class-alias-loader": "^1.1.4",
+                "typo3/cms-cli": "^3.1",
+                "typo3/cms-composer-installers": "^2.0 || ^3.0 || ^4.0",
+                "typo3/html-sanitizer": "^2.1.4",
                 "typo3/phar-stream-wrapper": "^3.1.7",
                 "typo3/symfony-psr-event-dispatcher-adapter": "^1.0 || ^2.0",
-                "typo3fluid/fluid": "^2.6.10"
+                "typo3fluid/fluid": "^2.7.2"
             },
             "conflict": {
-                "guzzlehttp/guzzle": "6.5.0",
                 "hoa/core": "*",
                 "typo3/cms": "*"
             },
             "provide": {
-                "psr/http-client-implementation": "1.0",
                 "psr/http-factory-implementation": "1.0",
                 "psr/http-message-implementation": "1.0"
             },
             "replace": {
-                "typo3/cms-lang": "*",
-                "typo3/cms-saltedpasswords": "*",
-                "typo3/cms-sv": "*"
-            },
-            "require-dev": {
-                "codeception/codeception": "^4.0",
-                "codeception/module-asserts": "^1.1",
-                "codeception/module-filesystem": "^1.0",
-                "codeception/module-webdriver": "^1.0.1",
-                "friendsofphp/php-cs-fixer": "^2.19 || ^3.0",
-                "mikey179/vfsstream": "^1.6.11",
-                "phpspec/prophecy": "^1.14.0",
-                "phpstan/phpstan": "^0.12.64",
-                "typo3/cms-styleguide": "~10.0.4",
-                "typo3/testing-framework": "^6.16.7"
+                "typo3/cms-lang": "self.version",
+                "typo3/cms-saltedpasswords": "self.version",
+                "typo3/cms-sv": "self.version"
             },
             "suggest": {
                 "ext-fileinfo": "Used for proper file type detection in the file abstraction layer",
                 "ext-gd": "GDlib/Freetype is required for building images with text (GIFBUILDER) and can also be used to scale images",
                 "ext-intl": "TYPO3 with unicode-based filesystems",
                 "ext-mysqli": "",
-                "ext-openssl": "OpenSSL is required for sending SMTP mails over an encrypted channel endpoint, and for extensions such as \"rsaauth\"",
+                "ext-openssl": "OpenSSL is required for sending SMTP mails over an encrypted channel endpoint",
                 "ext-zip": "",
                 "ext-zlib": "TYPO3 uses zlib for amongst others output compression and un/packing t3x extension files"
             },
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -5599,11 +6053,6 @@
                         "partOfMinimalUsableSystem": true
                     },
                     "extension-key": "core"
-                },
-                "typo3/class-alias-loader": {
-                    "class-alias-maps": [
-                        "Migrations/Code/ClassAliasMap.php"
-                    ]
                 }
             },
             "autoload": {
@@ -5636,29 +6085,29 @@
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-extbase",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/extbase.git",
-                "reference": "9b9c88efe129b9ca04e63876a1e123d892072404"
+                "reference": "4c78f677329ab572289625b48dbd1f0d8f2995fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/extbase/zipball/9b9c88efe129b9ca04e63876a1e123d892072404",
-                "reference": "9b9c88efe129b9ca04e63876a1e123d892072404",
+                "url": "https://api.github.com/repos/TYPO3-CMS/extbase/zipball/4c78f677329ab572289625b48dbd1f0d8f2995fb",
+                "reference": "4c78f677329ab572289625b48dbd1f0d8f2995fb",
                 "shasum": ""
             },
             "require": {
                 "phpdocumentor/reflection-docblock": "^5.2",
-                "phpdocumentor/type-resolver": "^1.3",
-                "symfony/dependency-injection": "^4.4 || ^5.0",
-                "symfony/property-access": "^4.4 || ^5.0",
-                "symfony/property-info": "^4.4 || ^5.0",
-                "typo3/cms-core": "10.4.37"
+                "phpdocumentor/type-resolver": "^1.4",
+                "symfony/dependency-injection": "^5.4",
+                "symfony/property-access": "^5.4",
+                "symfony/property-info": "^5.4",
+                "typo3/cms-core": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -5669,7 +6118,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -5705,25 +6154,25 @@
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-extensionmanager",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/extensionmanager.git",
-                "reference": "7aac8dfe5ff6fd6cd847bd5436be1b6fd4765293"
+                "reference": "0829d98fa7fd56febffded836208e48162f95c92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/extensionmanager/zipball/7aac8dfe5ff6fd6cd847bd5436be1b6fd4765293",
-                "reference": "7aac8dfe5ff6fd6cd847bd5436be1b6fd4765293",
+                "url": "https://api.github.com/repos/TYPO3-CMS/extensionmanager/zipball/0829d98fa7fd56febffded836208e48162f95c92",
+                "reference": "0829d98fa7fd56febffded836208e48162f95c92",
                 "shasum": ""
             },
             "require": {
                 "ext-libxml": "*",
-                "typo3/cms-core": "10.4.37"
+                "typo3/cms-core": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -5731,7 +6180,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -5766,24 +6215,24 @@
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-felogin",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/felogin.git",
-                "reference": "7563a4666816206b0557416d5a83ddbe5ec1fc8e"
+                "reference": "3d72b09f85d04d2a0bb797f572c763126a64098a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/felogin/zipball/7563a4666816206b0557416d5a83ddbe5ec1fc8e",
-                "reference": "7563a4666816206b0557416d5a83ddbe5ec1fc8e",
+                "url": "https://api.github.com/repos/TYPO3-CMS/felogin/zipball/3d72b09f85d04d2a0bb797f572c763126a64098a",
+                "reference": "3d72b09f85d04d2a0bb797f572c763126a64098a",
                 "shasum": ""
             },
             "require": {
-                "typo3/cms-core": "10.4.37"
+                "typo3/cms-core": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -5791,7 +6240,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -5802,7 +6251,6 @@
             },
             "autoload": {
                 "psr-4": {
-                    "TYPO3\\CMS\\Felogin\\": "Classes/",
                     "TYPO3\\CMS\\FrontendLogin\\": "Classes/"
                 }
             },
@@ -5821,28 +6269,28 @@
             "homepage": "https://typo3.org",
             "support": {
                 "chat": "https://typo3.org/help",
-                "docs": "https://docs.typo3.org/c/typo3/cms-felogin/10.4/en-us",
+                "docs": "https://docs.typo3.org/c/typo3/cms-felogin/11.5/en-us",
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-filelist",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/filelist.git",
-                "reference": "59b8fe14415b85cc0ad600dbd2fb065a9cdf4684"
+                "reference": "8861a04a00027c4d39b20f6699d4c12c8ed22a1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/filelist/zipball/59b8fe14415b85cc0ad600dbd2fb065a9cdf4684",
-                "reference": "59b8fe14415b85cc0ad600dbd2fb065a9cdf4684",
+                "url": "https://api.github.com/repos/TYPO3-CMS/filelist/zipball/8861a04a00027c4d39b20f6699d4c12c8ed22a1b",
+                "reference": "8861a04a00027c4d39b20f6699d4c12c8ed22a1b",
                 "shasum": ""
             },
             "require": {
-                "typo3/cms-core": "10.4.37"
+                "typo3/cms-core": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -5850,7 +6298,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -5885,27 +6333,27 @@
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-fluid",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/fluid.git",
-                "reference": "ec89e645ff50a202236dc3f66b9d07c2aa6d5b03"
+                "reference": "736d24f5fc11d6eca9490d73e5a80d778830a36c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/fluid/zipball/ec89e645ff50a202236dc3f66b9d07c2aa6d5b03",
-                "reference": "ec89e645ff50a202236dc3f66b9d07c2aa6d5b03",
+                "url": "https://api.github.com/repos/TYPO3-CMS/fluid/zipball/736d24f5fc11d6eca9490d73e5a80d778830a36c",
+                "reference": "736d24f5fc11d6eca9490d73e5a80d778830a36c",
                 "shasum": ""
             },
             "require": {
-                "symfony/dependency-injection": "^4.4 || ^5.0",
-                "typo3/cms-core": "10.4.37",
-                "typo3/cms-extbase": "10.4.37",
-                "typo3fluid/fluid": "^2.6.10"
+                "symfony/dependency-injection": "^5.4",
+                "typo3/cms-core": "11.5.38",
+                "typo3/cms-extbase": "11.5.38",
+                "typo3fluid/fluid": "^2.7.2"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -5913,10 +6361,11 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
+                        "serviceProvider": "TYPO3\\CMS\\Fluid\\ServiceProvider",
                         "protected": true,
                         "partOfFactoryDefault": true,
                         "partOfMinimalUsableSystem": true
@@ -5944,30 +6393,30 @@
             "homepage": "https://typo3.org",
             "support": {
                 "chat": "https://typo3.org/help",
-                "docs": "https://docs.typo3.org/other/typo3/view-helper-reference/10.4/en-us/",
+                "docs": "https://docs.typo3.org/other/typo3/view-helper-reference/main/en-us/",
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-fluid-styled-content",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/fluid_styled_content.git",
-                "reference": "ebcad8581a7f81bc69bf4aebb2ef99a590f84909"
+                "reference": "794456442de50765b1030ef3412fd007ead70592"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/fluid_styled_content/zipball/ebcad8581a7f81bc69bf4aebb2ef99a590f84909",
-                "reference": "ebcad8581a7f81bc69bf4aebb2ef99a590f84909",
+                "url": "https://api.github.com/repos/TYPO3-CMS/fluid_styled_content/zipball/794456442de50765b1030ef3412fd007ead70592",
+                "reference": "794456442de50765b1030ef3412fd007ead70592",
                 "shasum": ""
             },
             "require": {
-                "typo3/cms-core": "10.4.37",
-                "typo3/cms-fluid": "10.4.37",
-                "typo3/cms-frontend": "10.4.37"
+                "typo3/cms-core": "11.5.38",
+                "typo3/cms-fluid": "11.5.38",
+                "typo3/cms-frontend": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -5975,7 +6424,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -6004,30 +6453,30 @@
             "homepage": "https://typo3.org",
             "support": {
                 "chat": "https://typo3.org/help",
-                "docs": "https://docs.typo3.org/c/typo3/cms-fluid-styled-content/10.4/en-us",
+                "docs": "https://docs.typo3.org/c/typo3/cms-fluid-styled-content/main/en-us",
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-form",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/form.git",
-                "reference": "63c317bfebbdd49ab1777f2e26170319b6174123"
+                "reference": "147c800f77335f85ca67087de350aa6c0ef7a3f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/form/zipball/63c317bfebbdd49ab1777f2e26170319b6174123",
-                "reference": "63c317bfebbdd49ab1777f2e26170319b6174123",
+                "url": "https://api.github.com/repos/TYPO3-CMS/form/zipball/147c800f77335f85ca67087de350aa6c0ef7a3f0",
+                "reference": "147c800f77335f85ca67087de350aa6c0ef7a3f0",
                 "shasum": ""
             },
             "require": {
                 "psr/http-message": "^1.0",
-                "symfony/expression-language": "^4.4 || ^5.0",
-                "typo3/cms-core": "10.4.37"
+                "symfony/expression-language": "^5.4",
+                "typo3/cms-core": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -6039,7 +6488,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -6068,30 +6517,30 @@
             "homepage": "https://typo3.org",
             "support": {
                 "chat": "https://typo3.org/help",
-                "docs": "https://docs.typo3.org/c/typo3/cms-form/10.4/en-us",
+                "docs": "https://docs.typo3.org/c/typo3/cms-form/11.5/en-us",
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-frontend",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/frontend.git",
-                "reference": "d97ae4ed2f9f2062374536a00ff6f7bc1cba85ad"
+                "reference": "60e27f0c22d461e9558a0b45417271cf17bbeece"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/frontend/zipball/d97ae4ed2f9f2062374536a00ff6f7bc1cba85ad",
-                "reference": "d97ae4ed2f9f2062374536a00ff6f7bc1cba85ad",
+                "url": "https://api.github.com/repos/TYPO3-CMS/frontend/zipball/60e27f0c22d461e9558a0b45417271cf17bbeece",
+                "reference": "60e27f0c22d461e9558a0b45417271cf17bbeece",
                 "shasum": ""
             },
             "require": {
                 "ext-libxml": "*",
-                "symfony/polyfill-mbstring": "^1.16",
-                "typo3/cms-core": "10.4.37"
+                "symfony/polyfill-mbstring": "^1.23.1",
+                "typo3/cms-core": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -6102,7 +6551,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -6138,24 +6587,24 @@
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-impexp",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/impexp.git",
-                "reference": "a78f42a4e4977ffdead66ed7774c07e366fe7b91"
+                "reference": "3b5101300115cd12ca7937a00b3dafd4c10b24cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/impexp/zipball/a78f42a4e4977ffdead66ed7774c07e366fe7b91",
-                "reference": "a78f42a4e4977ffdead66ed7774c07e366fe7b91",
+                "url": "https://api.github.com/repos/TYPO3-CMS/impexp/zipball/3b5101300115cd12ca7937a00b3dafd4c10b24cb",
+                "reference": "3b5101300115cd12ca7937a00b3dafd4c10b24cb",
                 "shasum": ""
             },
             "require": {
-                "typo3/cms-core": "10.4.37"
+                "typo3/cms-core": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -6163,7 +6612,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -6192,39 +6641,39 @@
             "homepage": "https://typo3.org",
             "support": {
                 "chat": "https://typo3.org/help",
-                "docs": "https://docs.typo3.org",
+                "docs": "https://docs.typo3.org/c/typo3/cms-impexp/11.5/en-us/",
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-info",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/info.git",
-                "reference": "875f32625542aebd78e806024484b81c2789e8ec"
+                "reference": "226aa7a9afbc13a4fddce9b610572515ecc813a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/info/zipball/875f32625542aebd78e806024484b81c2789e8ec",
-                "reference": "875f32625542aebd78e806024484b81c2789e8ec",
+                "url": "https://api.github.com/repos/TYPO3-CMS/info/zipball/226aa7a9afbc13a4fddce9b610572515ecc813a7",
+                "reference": "226aa7a9afbc13a4fddce9b610572515ecc813a7",
                 "shasum": ""
             },
             "require": {
-                "typo3/cms-core": "10.4.37"
+                "typo3/cms-core": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
             },
             "replace": {
-                "typo3/cms-info-pagetsconfig": "*"
+                "typo3/cms-info-pagetsconfig": "self.version"
             },
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -6257,29 +6706,31 @@
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-install",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/install.git",
-                "reference": "3e82477beb50e2595665ed572f52a1e9e130ded6"
+                "reference": "c2b065105f961aa8754475abb4b07d72de7bad6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/install/zipball/3e82477beb50e2595665ed572f52a1e9e130ded6",
-                "reference": "3e82477beb50e2595665ed572f52a1e9e130ded6",
+                "url": "https://api.github.com/repos/TYPO3-CMS/install/zipball/c2b065105f961aa8754475abb4b07d72de7bad6e",
+                "reference": "c2b065105f961aa8754475abb4b07d72de7bad6e",
                 "shasum": ""
             },
             "require": {
-                "doctrine/dbal": "~2.10.0 || ~2.11.2 || ~2.13.1",
-                "nikic/php-parser": "^4.10.4",
-                "symfony/finder": "^4.4 || ^5.0",
-                "typo3/cms-core": "10.4.37",
-                "typo3/cms-extbase": "10.4.37",
-                "typo3/cms-fluid": "10.4.37"
+                "doctrine/dbal": "^2.13.8",
+                "guzzlehttp/promises": "^1.5.2 || ^2.0",
+                "nikic/php-parser": "^4.13.2",
+                "symfony/finder": "^5.4",
+                "symfony/http-foundation": "^5.4",
+                "typo3/cms-core": "11.5.38",
+                "typo3/cms-extbase": "11.5.38",
+                "typo3/cms-fluid": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -6287,7 +6738,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -6323,24 +6774,24 @@
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-lowlevel",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/lowlevel.git",
-                "reference": "4e8b5b683b55ad825ed9624567e24a198a3d6421"
+                "reference": "3d68eda3456471b1260cde9e5c63b40922fe20eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/lowlevel/zipball/4e8b5b683b55ad825ed9624567e24a198a3d6421",
-                "reference": "4e8b5b683b55ad825ed9624567e24a198a3d6421",
+                "url": "https://api.github.com/repos/TYPO3-CMS/lowlevel/zipball/3d68eda3456471b1260cde9e5c63b40922fe20eb",
+                "reference": "3d68eda3456471b1260cde9e5c63b40922fe20eb",
                 "shasum": ""
             },
             "require": {
-                "typo3/cms-core": "10.4.37"
+                "typo3/cms-core": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -6348,7 +6799,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -6382,24 +6833,24 @@
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-recordlist",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/recordlist.git",
-                "reference": "47cffea95b30726f130eb2d2bb6a7836f6fe5145"
+                "reference": "e3f83f0a2ae1c0912924115b73604c8c4f5f3101"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/recordlist/zipball/47cffea95b30726f130eb2d2bb6a7836f6fe5145",
-                "reference": "47cffea95b30726f130eb2d2bb6a7836f6fe5145",
+                "url": "https://api.github.com/repos/TYPO3-CMS/recordlist/zipball/e3f83f0a2ae1c0912924115b73604c8c4f5f3101",
+                "reference": "e3f83f0a2ae1c0912924115b73604c8c4f5f3101",
                 "shasum": ""
             },
             "require": {
-                "typo3/cms-core": "10.4.37"
+                "typo3/cms-core": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -6407,7 +6858,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -6442,29 +6893,30 @@
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-redirects",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/redirects.git",
-                "reference": "0570a85564e4304b3387dfdc232418221db193d9"
+                "reference": "97c314273e795dcd4ceac797f33197f90554ebdf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/redirects/zipball/0570a85564e4304b3387dfdc232418221db193d9",
-                "reference": "0570a85564e4304b3387dfdc232418221db193d9",
+                "url": "https://api.github.com/repos/TYPO3-CMS/redirects/zipball/97c314273e795dcd4ceac797f33197f90554ebdf",
+                "reference": "97c314273e795dcd4ceac797f33197f90554ebdf",
                 "shasum": ""
             },
             "require": {
-                "doctrine/dbal": "~2.10.0 || ~2.11.2 || ~2.13.1",
+                "doctrine/dbal": "^2.13.8",
                 "psr/http-message": "^1.0",
                 "psr/log": "^1.0",
-                "typo3/cms-backend": "10.4.37",
-                "typo3/cms-core": "10.4.37",
-                "typo3fluid/fluid": "^2.6.10"
+                "symfony/console": "^5.4",
+                "typo3/cms-backend": "11.5.38",
+                "typo3/cms-core": "11.5.38",
+                "typo3fluid/fluid": "^2.7.2"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -6476,7 +6928,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "extension-key": "redirects",
@@ -6505,28 +6957,28 @@
             "homepage": "https://typo3.org",
             "support": {
                 "chat": "https://typo3.org/help",
-                "docs": "https://docs.typo3.org/c/typo3/cms-redirects/10.4/en-us/",
+                "docs": "https://docs.typo3.org/c/typo3/cms-redirects/11.5/en-us/",
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-reports",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/reports.git",
-                "reference": "72be1d9bc437f4eccd1d0699bcf46481b02ffad6"
+                "reference": "34b40e2ea4308a2b3d6c3835064c1dbc9057992e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/reports/zipball/72be1d9bc437f4eccd1d0699bcf46481b02ffad6",
-                "reference": "72be1d9bc437f4eccd1d0699bcf46481b02ffad6",
+                "url": "https://api.github.com/repos/TYPO3-CMS/reports/zipball/34b40e2ea4308a2b3d6c3835064c1dbc9057992e",
+                "reference": "34b40e2ea4308a2b3d6c3835064c1dbc9057992e",
                 "shasum": ""
             },
             "require": {
-                "typo3/cms-core": "10.4.37"
+                "typo3/cms-core": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -6537,7 +6989,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -6570,24 +7022,24 @@
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-rte-ckeditor",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/rte_ckeditor.git",
-                "reference": "8a0faa5853db10ae3c440f8a16fcd1c1c4025536"
+                "reference": "1eb69935598a7175020c1a6bb9e35f64dd049e6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/rte_ckeditor/zipball/8a0faa5853db10ae3c440f8a16fcd1c1c4025536",
-                "reference": "8a0faa5853db10ae3c440f8a16fcd1c1c4025536",
+                "url": "https://api.github.com/repos/TYPO3-CMS/rte_ckeditor/zipball/1eb69935598a7175020c1a6bb9e35f64dd049e6a",
+                "reference": "1eb69935598a7175020c1a6bb9e35f64dd049e6a",
                 "shasum": ""
             },
             "require": {
-                "typo3/cms-core": "10.4.37"
+                "typo3/cms-core": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -6598,7 +7050,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -6627,30 +7079,30 @@
             "homepage": "https://typo3.org",
             "support": {
                 "chat": "https://typo3.org/help",
-                "docs": "https://docs.typo3.org/c/typo3/cms-rte-ckeditor/10.4/en-us",
+                "docs": "https://docs.typo3.org/c/typo3/cms-rte-ckeditor/11.5/en-us",
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-seo",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/seo.git",
-                "reference": "24e7bce1d8815ee8694661562ff2b11f2d767749"
+                "reference": "d0b7b8171c2f0c4306142fb62d942d5c19efbe51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/seo/zipball/24e7bce1d8815ee8694661562ff2b11f2d767749",
-                "reference": "24e7bce1d8815ee8694661562ff2b11f2d767749",
+                "url": "https://api.github.com/repos/TYPO3-CMS/seo/zipball/d0b7b8171c2f0c4306142fb62d942d5c19efbe51",
+                "reference": "d0b7b8171c2f0c4306142fb62d942d5c19efbe51",
                 "shasum": ""
             },
             "require": {
-                "typo3/cms-core": "10.4.37",
-                "typo3/cms-extbase": "10.4.37",
-                "typo3/cms-frontend": "10.4.37"
+                "typo3/cms-core": "11.5.38",
+                "typo3/cms-extbase": "11.5.38",
+                "typo3/cms-frontend": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -6658,7 +7110,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "extension-key": "seo",
@@ -6687,28 +7139,28 @@
             "homepage": "https://typo3.org",
             "support": {
                 "chat": "https://typo3.org/help",
-                "docs": "https://docs.typo3.org/c/typo3/cms-seo/10.4/en-us",
+                "docs": "https://docs.typo3.org/c/typo3/cms-seo/11.5/en-us",
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-setup",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/setup.git",
-                "reference": "70dca91a9f494005731a788a95c8e9ede31566a4"
+                "reference": "0776a58128e55fc378526e427fcfe5c5403a7e0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/setup/zipball/70dca91a9f494005731a788a95c8e9ede31566a4",
-                "reference": "70dca91a9f494005731a788a95c8e9ede31566a4",
+                "url": "https://api.github.com/repos/TYPO3-CMS/setup/zipball/0776a58128e55fc378526e427fcfe5c5403a7e0e",
+                "reference": "0776a58128e55fc378526e427fcfe5c5403a7e0e",
                 "shasum": ""
             },
             "require": {
-                "typo3/cms-core": "10.4.37"
+                "typo3/cms-core": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -6716,7 +7168,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -6749,24 +7201,24 @@
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-sys-note",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/sys_note.git",
-                "reference": "1f8569de667af8039698a3dae5e7dc3b36d3215a"
+                "reference": "9d352f1ee0464c0487b7e3af6068b6611ec3763d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/sys_note/zipball/1f8569de667af8039698a3dae5e7dc3b36d3215a",
-                "reference": "1f8569de667af8039698a3dae5e7dc3b36d3215a",
+                "url": "https://api.github.com/repos/TYPO3-CMS/sys_note/zipball/9d352f1ee0464c0487b7e3af6068b6611ec3763d",
+                "reference": "9d352f1ee0464c0487b7e3af6068b6611ec3763d",
                 "shasum": ""
             },
             "require": {
-                "typo3/cms-core": "10.4.37"
+                "typo3/cms-core": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -6774,7 +7226,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -6807,25 +7259,25 @@
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-t3editor",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/t3editor.git",
-                "reference": "c0d4c770c405b85b78d14406049a27a1ce9b8968"
+                "reference": "1d8f009527913229a28929f4b2d590ab78fe1aff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/t3editor/zipball/c0d4c770c405b85b78d14406049a27a1ce9b8968",
-                "reference": "c0d4c770c405b85b78d14406049a27a1ce9b8968",
+                "url": "https://api.github.com/repos/TYPO3-CMS/t3editor/zipball/1d8f009527913229a28929f4b2d590ab78fe1aff",
+                "reference": "1d8f009527913229a28929f4b2d590ab78fe1aff",
                 "shasum": ""
             },
             "require": {
                 "ext-libxml": "*",
-                "typo3/cms-core": "10.4.37"
+                "typo3/cms-core": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -6833,7 +7285,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -6858,32 +7310,32 @@
                     "role": "Developer"
                 }
             ],
-            "description": "JavaScript-driven editor with syntax highlighting and codecompletion. Based on CodeMirror.",
+            "description": "JavaScript-driven editor with syntax highlighting and code completion. Based on CodeMirror.",
             "homepage": "https://typo3.org",
             "support": {
                 "chat": "https://typo3.org/help",
-                "docs": "https://docs.typo3.org",
+                "docs": "https://docs.typo3.org/c/typo3/cms-t3editor/11.5/en-us",
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-tstemplate",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/tstemplate.git",
-                "reference": "cf923ac575c85529bc82131ea66feaa187853ae9"
+                "reference": "3e3576d9a3e7dffe136b93074e72f79ea895f407"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/tstemplate/zipball/cf923ac575c85529bc82131ea66feaa187853ae9",
-                "reference": "cf923ac575c85529bc82131ea66feaa187853ae9",
+                "url": "https://api.github.com/repos/TYPO3-CMS/tstemplate/zipball/3e3576d9a3e7dffe136b93074e72f79ea895f407",
+                "reference": "3e3576d9a3e7dffe136b93074e72f79ea895f407",
                 "shasum": ""
             },
             "require": {
-                "typo3/cms-core": "10.4.37"
+                "typo3/cms-core": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -6891,7 +7343,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -6924,24 +7376,24 @@
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/cms-viewpage",
-            "version": "v10.4.37",
+            "version": "v11.5.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/viewpage.git",
-                "reference": "0489b4e7fde3997551896be3c4597a0669db5819"
+                "reference": "31b8a22bc6833c0df9052e680fe28c01a0b7b803"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/viewpage/zipball/0489b4e7fde3997551896be3c4597a0669db5819",
-                "reference": "0489b4e7fde3997551896be3c4597a0669db5819",
+                "url": "https://api.github.com/repos/TYPO3-CMS/viewpage/zipball/31b8a22bc6833c0df9052e680fe28c01a0b7b803",
+                "reference": "31b8a22bc6833c0df9052e680fe28c01a0b7b803",
                 "shasum": ""
             },
             "require": {
-                "typo3/cms-core": "10.4.37"
+                "typo3/cms-core": "11.5.38"
             },
             "conflict": {
                 "typo3/cms": "*"
@@ -6949,7 +7401,7 @@
             "type": "typo3-cms-framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.4.x-dev"
+                    "dev-master": "11.5.x-dev"
                 },
                 "typo3/cms": {
                     "Package": {
@@ -6982,7 +7434,7 @@
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2023-04-11T13:10:15+00:00"
+            "time": "2024-06-11T07:50:04+00:00"
         },
         {
             "name": "typo3/html-sanitizer",
@@ -7037,35 +7489,30 @@
         },
         {
             "name": "typo3/minimal",
-            "version": "v10.4.0",
+            "version": "v11.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/minimal.git",
-                "reference": "858bc4b51f9183306f4301db3cead2f99a0d48ff"
+                "reference": "28c3d3b2b0fcd872eb51d8f4c26594284a3eb1fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/minimal/zipball/858bc4b51f9183306f4301db3cead2f99a0d48ff",
-                "reference": "858bc4b51f9183306f4301db3cead2f99a0d48ff",
+                "url": "https://api.github.com/repos/TYPO3/minimal/zipball/28c3d3b2b0fcd872eb51d8f4c26594284a3eb1fe",
+                "reference": "28c3d3b2b0fcd872eb51d8f4c26594284a3eb1fe",
                 "shasum": ""
             },
             "require": {
-                "typo3/cms-backend": "^10.4",
-                "typo3/cms-core": "^10.4",
-                "typo3/cms-extbase": "^10.4",
-                "typo3/cms-extensionmanager": "^10.4",
-                "typo3/cms-filelist": "^10.4",
-                "typo3/cms-fluid": "^10.4",
-                "typo3/cms-frontend": "^10.4",
-                "typo3/cms-install": "^10.4",
-                "typo3/cms-recordlist": "^10.4"
+                "typo3/cms-backend": "^11.5",
+                "typo3/cms-core": "^11.5",
+                "typo3/cms-extbase": "^11.5",
+                "typo3/cms-extensionmanager": "^11.5",
+                "typo3/cms-filelist": "^11.5",
+                "typo3/cms-fluid": "^11.5",
+                "typo3/cms-frontend": "^11.5",
+                "typo3/cms-install": "^11.5",
+                "typo3/cms-recordlist": "^11.5"
             },
             "type": "metapackage",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "10.4.x-dev"
-                }
-            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
@@ -7088,9 +7535,9 @@
                 "irc": "irc://irc.freenode.net/#typo3-cms",
                 "issues": "https://forge.typo3.org",
                 "news": "nntp://lists.typo3.org",
-                "source": "https://github.com/TYPO3/minimal/tree/v10.4.0"
+                "source": "https://github.com/TYPO3/minimal/tree/v11.5.0"
             },
-            "time": "2020-04-21T08:52:32+00:00"
+            "time": "2021-10-05T11:29:15+00:00"
         },
         {
             "name": "typo3/phar-stream-wrapper",
@@ -7359,7 +7806,7 @@
     "platform": [],
     "platform-dev": [],
     "platform-overrides": {
-        "php": "7.4"
+        "php": "7.4.1"
     },
     "plugin-api-version": "2.6.0"
 }
