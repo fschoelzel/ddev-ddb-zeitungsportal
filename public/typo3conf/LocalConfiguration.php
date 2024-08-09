@@ -55,7 +55,6 @@ return [
                 'userAgent' => 'Kitodo.Presentation',
             ],
             'iiif' => [
-                'indexAnnotations' => '0',
                 'thumbnailHeight' => '150',
                 'thumbnailWidth' => '150',
             ],
