@@ -2,4 +2,5 @@
 services:
   web:
     volumes:
-      - "$HOME/projects/extensions/ddb-zeitungsportal/fschoelzel/ddb_kitodo_zeitungsportal:/var/www/extensions/ddb_kitodo_zeitungsportal"
+    #   - "$HOME/projects/extensions/ddb-zeitungsportal/fschoelzel/ddb_kitodo_zeitungsportal:/var/www/extensions/ddb_kitodo_zeitungsportal"
+    #   - "$HOME/projects/extensions/ddb-zeitungsportal/fschoelzel/kitodo-presentation:/var/www/extensions/kitodo-presentation"
