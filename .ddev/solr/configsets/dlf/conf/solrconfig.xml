@@ -702,10 +702,10 @@
       <str name="df">default</str>
       <str name="q.op">AND</str>
       <!-- Default search field
-         <str name="df">text</str> 
+         <str name="df">text</str>
         -->
       <!-- Change from JSON to XML format (the default prior to Solr 7.0)
-         <str name="wt">xml</str> 
+         <str name="wt">xml</str>
         -->
     </lst>
 
@@ -872,7 +872,7 @@
      -->
 
     <!-- Add a new named search component that takes care of highlighting OCR field values. -->
-    <searchComponent class="solrocr.OcrHighlightComponent" name="ocrHighlight" />
+    <searchComponent class="de.digitalcollections.solrocr.solr.OcrHighlightComponent" name="ocrHighlight" />
 
     <!-- Autocomplete Component -->
     <searchComponent name="suggest" class="solr.SpellCheckComponent">
@@ -885,9 +885,9 @@
             <str name="queryAnalyzerFieldType">autocomplete</str>
         </lst>
     </searchComponent>
-  
+
  <schemaFactory class="ClassicIndexSchemaFactory"/>
-  
+
   <!-- Spell Check
 
        The spell check component can return a list of alternative spelling
@@ -895,12 +895,12 @@
 
        http://wiki.apache.org/solr/SpellCheckComponent
     -->
-    
+
   <!-- Term Vector Component
 
        http://wiki.apache.org/solr/TermVectorComponent
     -->
-    
+
   <!-- Clustering Component. (Omitted here. See the default Solr example for a typical configuration.) -->
 
   <!-- Terms Component

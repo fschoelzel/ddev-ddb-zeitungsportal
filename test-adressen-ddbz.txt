@@ -1,0 +1,8 @@
+Dokument Anzeige: (nach kitodo:index)
+https://ddev-ddb-zeitungsportal.ddev.site/?debug=1&tx_dlf[id]=1
+https://ddev-ddb-zeitungsportal.ddev.site/?debug=1&tx_dlf[id]=https%3A%2F%2Fapi.deutsche-digitale-bibliothek.de%2Fitems%2F72OLPWCWDFDG7AVAYDDVJGMYRMZWBHDR%2Fsource%2Frecord
+
+
+Text Highlight:
+https://ddev-ddb-zeitungsportal.ddev.site/?uid=1&tx_dlf[highlight_word]=Trommler&issuepage=3&debug=1&tx_dlf[id]=1&tx_dlf[page]=3&cHash=8ac478eea6228f31740d8bc3384ab05a
+https://ddev-ddb-zeitungsportal.ddev.site/?issue_id=72OLPWCWDFDG7AVAYDDVJGMYRMZWBHDR&tx_dlf[highlight_word]=Trommler&issuepage=3&debug=1&tx_dlf[id]=https%3A%2F%2Fapi.deutsche-digitale-bibliothek.de%2Fitems%2F72OLPWCWDFDG7AVAYDDVJGMYRMZWBHDR%2Fsource%2Frecord&tx_dlf[page]=3&cHash=6a9142b6fcbb6249c0da56c07e1ba349#fulltext-wrapper
