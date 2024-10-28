@@ -60,6 +60,7 @@ return [
             'indexAnnotations' => '0',
             'solr' => [
                 'allowCoreDelete' => '0',
+                'connect' => '0',
                 'fields' => [
                     'autocomplete' => 'autocomplete',
                     'collection' => 'collection',
