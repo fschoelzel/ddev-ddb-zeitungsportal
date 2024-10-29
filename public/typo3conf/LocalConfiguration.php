@@ -59,6 +59,7 @@ return [
                 'thumbnailHeight' => '150',
                 'thumbnailWidth' => '150',
             ],
+            'indexAnnotations' => '0',
             'solr' => [
                 'allowCoreDelete' => '0',
                 'connect' => '0',
