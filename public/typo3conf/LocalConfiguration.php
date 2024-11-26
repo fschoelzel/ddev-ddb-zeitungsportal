@@ -36,11 +36,17 @@ return [
             'loginLogoAlt' => '',
         ],
         'dlf' => [
+            'annotationServerUrl' => '',
+            'embedded3dviewer' => [
+                'defaultViewer' => '',
+                'viewerModelFormatMapping' => '',
+            ],
             'files' => [
                 'fileGrpAudio' => 'AUDIO',
                 'fileGrpDownload' => 'DOWNLOAD',
                 'fileGrpFulltext' => 'DDB_FULLTEXT,FULLTEXT',
                 'fileGrpImages' => 'DEFAULT,MAX',
+                'fileGrpScore' => 'SCORE',
                 'fileGrpThumbs' => 'THUMBS',
             ],
             'general' => [
@@ -49,11 +55,13 @@ return [
                 'forceAbsoluteUrl' => '1',
                 'forceAbsoluteUrlHttps' => '1',
                 'publishNewCollections' => '1',
+                'requiredMetadataFields' => 'document_format,record_id',
                 'unhideOnIndex' => '0',
                 'useExternalApisForMetadata' => '0',
                 'userAgent' => 'DDB-Zeitungsportal',
             ],
             'iiif' => [
+                'indexAnnotations' => '0',
                 'thumbnailHeight' => '150',
                 'thumbnailWidth' => '150',
             ],
