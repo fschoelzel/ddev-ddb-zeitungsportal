@@ -60,8 +60,6 @@ limitations under the License.
         <fieldType name="text_ocr" class="solr.TextField" storeOffsetsWithPositions="true" termVectors="true">
             <!-- TODO: check why some filters are outcommented -->
             <analyzer type="index">
-                <!-- For loading external files as field values during indexing -->
-                <charFilter class="solrocr.ExternalUtf8ContentFilterFactory" />
                 <!-- For converting OCR to plaintext -->
                 <charFilter class="solrocr.OcrCharFilterFactory" />
 
@@ -154,7 +152,7 @@ limitations under the License.
         <field name="default" type="standard" indexed="true" stored="false" required="true" multiValued="true" default="" />
         <field name="timestamp" type="date" indexed="true" stored="true" required="true" multiValued="false" default="NOW" />
         <!-- Autocomplete field for search form. -->
-        <field name="autocomplete" type="autocomplete" indexed="true" stored="false" multiValued="true" />
+        <field name="autocomplete" type="autocomplete" indexed="true" stored="true" multiValued="true" />
         <!-- Fulltext field for OCR results. -->
         <field name="fulltext" type="text_ocr" indexed="true" stored="true" multiValued="false" default="" termVectors="true" termPositions="true" termOffsets="true" />
         <!-- Record ID of the document (required for OAI_DC output). -->
@@ -196,7 +194,7 @@ limitations under the License.
         <dynamicField name="*_uuu" type="string" stored="false" indexed="false" multiValued="true" />
         <!-- "*_faceting" and "*_sorting" should always be used in addition to one of the other fields. -->
         <dynamicField name="*_faceting" type="string" stored="false" indexed="true" multiValued="true" />
-        <dynamicField name="*_sorting" type="standard" stored="true" indexed="true" multiValued="false" />
+        <dynamicField name="*_sorting" type="string" stored="true" indexed="true" multiValued="false" />
     </fields>
 
     <uniqueKey>id</uniqueKey>
