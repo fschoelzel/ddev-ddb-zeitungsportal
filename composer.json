@@ -1,8 +1,12 @@
 {
     "repositories": {
         "ddb-kitodo-zeitungsportal": {
-            "type": "git",
-            "url": "https://github.com/fschoelzel/ddb_kitodo_zeitungsportal"
+            "type": "path",
+            "url": "public/typo3conf/ext/ddb_kitodo_zeitungsportal"
+        },
+        "kitodo-presentation": {
+            "type": "path",
+            "url": "public/typo3conf/ext/dlf"
         },
         "0": {
             "type": "composer",
@@ -44,8 +48,8 @@
         "typo3/cms-t3editor": "^11.5",
         "typo3/cms-tstemplate": "^11.5",
         "typo3/cms-viewpage": "^11.5",
-        "kitodo/presentation": "~5.0.0",
-        "slub/ddb-kitodo-zeitungsportal": "dev-dlf-5"
+        "kitodo/presentation": "~5.0.0|@dev",
+        "slub/ddb-kitodo-zeitungsportal": "3.0.0|dev-dlf-5|@dev"
     },
     "scripts": {
         "typo3-cms-scripts": [
