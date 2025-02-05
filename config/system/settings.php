@@ -2,7 +2,6 @@
 return [
     'BE' => [
         'debug' => true,
-        'explicitADmode' => 'explicitAllow',
         'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=1$Z3RTVEhTNkVvQ01xSmpyMA$Ys/AqjzxyYJxAZs7n5tZVBh6KyOI6txISt6qHlNRll0',
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
@@ -68,21 +67,19 @@ return [
                 'thumbnailHeight' => '150',
                 'thumbnailWidth' => '150',
             ],
-            'indexAnnotations' => '0',
             'solr' => [
                 'allowCoreDelete' => '0',
-                'connect' => '0',
                 'fields' => [
                     'autocomplete' => 'autocomplete',
                     'collection' => 'collection',
                     'date' => 'date',
                     'default' => 'default',
-                    'fulltext' => 'fulltext',
+                    'fulltext' => 'pagefulltext',
                     'geom' => 'geom',
                     'id' => 'id',
                     'license' => 'license',
                     'location' => 'location',
-                    'page' => 'page',
+                    'page' => 'pagenumber',
                     'partof' => 'partof',
                     'pid' => 'pid',
                     'purl' => 'purl',
@@ -96,15 +93,15 @@ return [
                     'title' => 'title',
                     'toplevel' => 'toplevel',
                     'type' => 'type',
-                    'uid' => 'uid',
+                    'uid' => 'issue_id',
                     'urn' => 'urn',
                     'volume' => 'volume',
                 ],
-                'host' => 'ddev-ddb-zeitungsportal.ddev.site',
-                'https' => '0',
+                'host' => 'api-q1.deutsche-digitale-bibliothek.de',
+                'https' => '1',
                 'pass' => '',
                 'path' => '/',
-                'port' => '8983',
+                'port' => '443',
                 'timeout' => '10',
                 'user' => '',
             ],
@@ -138,7 +135,6 @@ return [
         'processor_effects' => true,
         'processor_enabled' => true,
         'processor_path' => '/usr/bin/',
-        'processor_path_lzw' => '/usr/bin/',
     ],
     'LOG' => [
         'TYPO3' => [
@@ -181,12 +177,6 @@ return [
                         'compression' => true,
                     ],
                 ],
-                'pagesection' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
-                    'options' => [
-                        'compression' => true,
-                    ],
-                ],
                 'rootline' => [
                     'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
                     'options' => [
@@ -201,6 +191,7 @@ return [
         'exceptionalErrors' => 12290,
         'features' => [
             'newTranslationServer' => true,
+            'security.usePasswordPolicyForFrontendUsers' => true,
             'unifiedPageTranslationHandling' => true,
         ],
         'sitename' => 'New TYPO3 Console site',

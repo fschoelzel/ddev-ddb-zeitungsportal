@@ -1,8 +1,12 @@
 {
     "repositories": {
         "ddb-kitodo-zeitungsportal": {
-            "type": "git",
-            "url": "https://github.com/fschoelzel/ddb_kitodo_zeitungsportal"
+            "type": "path",
+            "url": "public/typo3conf/ext/ddb_kitodo_zeitungsportal"
+        },
+        "kitodo-presentation": {
+            "type": "path",
+            "url": "public/typo3conf/ext/dlf"
         },
         "0": {
             "type": "composer",
@@ -14,7 +18,7 @@
     "license": "GPL-2.0-or-later",
     "config": {
         "platform": {
-            "php": "7.4.1"
+            "php": "8.2"
         },
         "allow-plugins": {
             "typo3/cms-composer-installers": true,
@@ -23,33 +27,33 @@
         }
     },
     "require": {
-        "helhum/typo3-console": "^7.1",
-        "typo3/minimal": "^11",
-        "typo3/cms-about": "^11.5",
-        "typo3/cms-adminpanel": "^11.5",
-        "typo3/cms-belog": "^11.5",
-        "typo3/cms-beuser": "^11.5",
-        "typo3/cms-felogin": "^11.5",
-        "typo3/cms-fluid-styled-content": "^11.5",
-        "typo3/cms-form": "^11.5",
-        "typo3/cms-impexp": "^11.5",
-        "typo3/cms-info": "^11.5",
-        "typo3/cms-lowlevel": "^11.5",
-        "typo3/cms-redirects": "^11.5",
-        "typo3/cms-reports": "^11.5",
-        "typo3/cms-rte-ckeditor": "^11.5",
-        "typo3/cms-seo": "^11.5",
-        "typo3/cms-setup": "^11.5",
-        "typo3/cms-sys-note": "^11.5",
-        "typo3/cms-t3editor": "^11.5",
-        "typo3/cms-tstemplate": "^11.5",
-        "typo3/cms-viewpage": "^11.5",
-        "kitodo/presentation": "~5.0.0",
-        "slub/ddb-kitodo-zeitungsportal": "dev-dlf-5"
+        "helhum/typo3-console": "^8.2",
+        "typo3/minimal": "^12.4",
+        "typo3/cms-about": "^12.4",
+        "typo3/cms-adminpanel": "^12.4",
+        "typo3/cms-belog": "^12.4",
+        "typo3/cms-beuser": "^12.4",
+        "typo3/cms-felogin": "^12.4",
+        "typo3/cms-fluid-styled-content": "^12.4",
+        "typo3/cms-form": "^12.4",
+        "typo3/cms-impexp": "^12.4",
+        "typo3/cms-info": "^12.4",
+        "typo3/cms-lowlevel": "^12.4",
+        "typo3/cms-redirects": "^12.4",
+        "typo3/cms-reports": "^12.4",
+        "typo3/cms-rte-ckeditor": "^12.4",
+        "typo3/cms-seo": "^12.4",
+        "typo3/cms-setup": "^12.4",
+        "typo3/cms-sys-note": "^12.4",
+        "typo3/cms-t3editor": "^12.4",
+        "typo3/cms-tstemplate": "^12.4",
+        "typo3/cms-viewpage": "^12.4",
+        "kitodo/presentation": "^6.0|dev-main|@dev",
+        "slub/ddb-kitodo-zeitungsportal": "^4.0|dev-dlf-6|@dev"
     },
     "scripts": {
         "typo3-cms-scripts": [
-            "typo3cms install:fixfolderstructure"
+            "typo3 install:fixfolderstructure"
         ],
         "post-autoload-dump": [
             "@typo3-cms-scripts"

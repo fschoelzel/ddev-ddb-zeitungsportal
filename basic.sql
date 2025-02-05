@@ -1,8 +1,11 @@
--- MariaDB dump 10.19  Distrib 10.11.9-MariaDB, for debian-linux-gnu (x86_64)
+
+-- Dump of TYPO3 Connection "Default"
+/*M!999999\- enable the sandbox mode */ 
+-- MariaDB dump 10.19  Distrib 10.11.10-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: db    Database: db
 -- ------------------------------------------------------
--- Server version	10.3.39-MariaDB-1:10.3.39+maria~ubu2004-log
+-- Server version	10.6.20-MariaDB-ubu2004-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -24,10 +27,9 @@ DROP TABLE IF EXISTS `backend_layout`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `backend_layout` (
   `uid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `pid` int(11) NOT NULL DEFAULT 0,
+  `pid` int(10) unsigned NOT NULL DEFAULT 0,
   `tstamp` int(10) unsigned NOT NULL DEFAULT 0,
   `crdate` int(10) unsigned NOT NULL DEFAULT 0,
-  `cruser_id` int(10) unsigned NOT NULL DEFAULT 0,
   `deleted` smallint(5) unsigned NOT NULL DEFAULT 0,
   `hidden` smallint(5) unsigned NOT NULL DEFAULT 0,
   `sorting` int(11) NOT NULL DEFAULT 0,
@@ -67,7 +69,6 @@ CREATE TABLE `be_groups` (
   `pid` int(10) unsigned NOT NULL DEFAULT 0,
   `tstamp` int(10) unsigned NOT NULL DEFAULT 0,
   `crdate` int(10) unsigned NOT NULL DEFAULT 0,
-  `cruser_id` int(10) unsigned NOT NULL DEFAULT 0,
   `deleted` smallint(5) unsigned NOT NULL DEFAULT 0,
   `hidden` smallint(5) unsigned NOT NULL DEFAULT 0,
   `description` text DEFAULT NULL,
@@ -104,65 +105,6 @@ LOCK TABLES `be_groups` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `be_users`
---
-
-DROP TABLE IF EXISTS `be_users`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `be_users` (
-  `uid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `pid` int(10) unsigned NOT NULL DEFAULT 0,
-  `tstamp` int(10) unsigned NOT NULL DEFAULT 0,
-  `crdate` int(10) unsigned NOT NULL DEFAULT 0,
-  `cruser_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `deleted` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `disable` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `starttime` int(10) unsigned NOT NULL DEFAULT 0,
-  `endtime` int(10) unsigned NOT NULL DEFAULT 0,
-  `description` text DEFAULT NULL,
-  `username` varchar(50) NOT NULL DEFAULT '',
-  `avatar` int(10) unsigned NOT NULL DEFAULT 0,
-  `password` varchar(100) NOT NULL DEFAULT '',
-  `admin` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `usergroup` text DEFAULT NULL,
-  `lang` varchar(10) NOT NULL DEFAULT 'default',
-  `email` varchar(255) NOT NULL DEFAULT '',
-  `db_mountpoints` text DEFAULT NULL,
-  `options` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `realName` varchar(80) NOT NULL DEFAULT '',
-  `userMods` text DEFAULT NULL,
-  `allowed_languages` varchar(255) NOT NULL DEFAULT '',
-  `uc` mediumblob DEFAULT NULL,
-  `file_mountpoints` text DEFAULT NULL,
-  `file_permissions` text DEFAULT NULL,
-  `workspace_perms` smallint(6) NOT NULL DEFAULT 1,
-  `TSconfig` text DEFAULT NULL,
-  `lastlogin` int(10) unsigned NOT NULL DEFAULT 0,
-  `workspace_id` int(11) NOT NULL DEFAULT 0,
-  `category_perms` longtext DEFAULT NULL,
-  `password_reset_token` varchar(100) NOT NULL DEFAULT '',
-  `mfa` mediumblob DEFAULT NULL,
-  PRIMARY KEY (`uid`),
-  KEY `username` (`username`),
-  KEY `parent` (`pid`,`deleted`,`disable`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `be_users`
---
-
-LOCK TABLES `be_users` WRITE;
-/*!40000 ALTER TABLE `be_users` DISABLE KEYS */;
-INSERT INTO `be_users` VALUES
-(1,0,1628075905,1628075358,0,0,0,0,0,NULL,'kitodo',0,'$argon2i$v=19$m=65536,t=16,p=1$SUVXZnhpNDlDbDA1WWNGVg$/ovMgziyrWnp6qdn2ovz60mG21vebGrkaLRPDeHuuo8',1,'','de','',NULL,0,'',NULL,'','',NULL,NULL,1,NULL,0,0,NULL,'',NULL),
-(2,0,1628164991,1628164991,0,0,0,0,0,NULL,'_cli_',0,'$argon2i$v=19$m=65536,t=16,p=1$T3FiTGtSVU02TUJWYjFRZA$A5fPErW2fyV3Rzleyypb4i7z50/iOkbVy8Kzj+mir+g',1,'','default','',NULL,0,'',NULL,'','a:9:{s:14:\"interfaceSetup\";s:0:\"\";s:10:\"moduleData\";a:0:{}s:14:\"emailMeAtLogin\";i:0;s:8:\"titleLen\";i:50;s:8:\"edit_RTE\";s:1:\"1\";s:20:\"edit_docModuleUpload\";s:1:\"1\";s:25:\"resizeTextareas_MaxHeight\";i:500;s:4:\"lang\";s:7:\"default\";s:19:\"firstLoginTimeStamp\";i:1719335610;}',NULL,NULL,1,NULL,0,0,NULL,'',NULL),
-(3,0,1629184457,1629184393,0,0,0,0,0,NULL,'admin',0,'$argon2i$v=19$m=65536,t=16,p=1$Y2dOZ0hnNUIvUnlxUjlVRg$hwsrFkUiggAx7NXrnTqHQKeMaJZaRtPFVmjiN2w0A44',1,'','default','',NULL,0,'',NULL,'','a:16:{s:14:\"interfaceSetup\";s:0:\"\";s:10:\"moduleData\";a:13:{s:12:\"system_dbint\";a:5:{s:8:\"function\";s:1:\"0\";s:8:\"language\";N;s:19:\"constant_editor_cat\";N;s:6:\"search\";s:3:\"raw\";s:22:\"search_query_makeQuery\";s:3:\"all\";}s:13:\"system_config\";a:3:{s:4:\"tree\";s:8:\"confVars\";s:11:\"regexSearch\";b:0;s:13:\"node_confVars\";a:7:{s:3:\"EXT\";i:1;s:10:\"EXTENSIONS\";i:1;s:14:\"EXTENSIONS.dlf\";i:1;s:22:\"EXTENSIONS.dlf.general\";i:1;s:20:\"EXTENSIONS.dlf.files\";i:1;s:19:\"EXTENSIONS.dlf.solr\";i:1;s:27:\"EXTENSIONS.extensionmanager\";i:1;}}s:10:\"web_layout\";a:3:{s:8:\"function\";s:1:\"1\";s:8:\"language\";s:1:\"0\";s:19:\"constant_editor_cat\";N;}s:8:\"web_list\";a:3:{s:8:\"function\";N;s:8:\"language\";N;s:19:\"constant_editor_cat\";N;}s:6:\"web_ts\";a:8:{s:8:\"function\";s:87:\"TYPO3\\CMS\\Tstemplate\\Controller\\TypoScriptTemplateObjectBrowserModuleFunctionController\";s:8:\"language\";N;s:19:\"constant_editor_cat\";s:32:\"plugin.ddb_kitodo_zeitungsportal\";s:15:\"ts_browser_type\";s:5:\"const\";s:16:\"ts_browser_const\";s:1:\"0\";s:23:\"ts_browser_showComments\";s:1:\"1\";s:25:\"tsbrowser_depthKeys_const\";a:5:{s:14:\"styles.content\";i:1;s:28:\"plugin.tx_felogin_login.view\";i:1;s:8:\"constant\";i:1;s:6:\"plugin\";i:1;s:9:\"constants\";i:1;}s:25:\"tsbrowser_depthKeys_setup\";a:12:{s:43:\"plugin.tx_dlf_searchindocumenttool.settings\";i:1;s:36:\"plugin.tx_dlf.view.templateRootPaths\";i:1;s:22:\"plugin.tx_dlf.settings\";i:1;s:25:\"plugin.tx_dlf.persistence\";i:1;s:18:\"plugin.tx_dlf.view\";i:1;s:47:\"plugin.tx_ddb_kitodo_zeitungsportal._LOCAL_LANG\";i:1;s:55:\"plugin.tx_ddb_kitodo_zeitungsportal._LOCAL_LANG.default\";i:1;s:64:\"plugin.tx_ddb_kitodo_zeitungsportal._LOCAL_LANG.default.pageview\";i:1;s:77:\"plugin.tx_ddb_kitodo_zeitungsportal._LOCAL_LANG.default.pageview.overview-map\";i:1;s:50:\"plugin.tx_ddb_kitodo_zeitungsportal._LOCAL_LANG.de\";i:1;s:59:\"plugin.tx_ddb_kitodo_zeitungsportal._LOCAL_LANG.de.pageview\";i:1;s:72:\"plugin.tx_ddb_kitodo_zeitungsportal._LOCAL_LANG.de.pageview.overview-map\";i:1;}}s:10:\"FormEngine\";a:2:{i:0;a:3:{s:32:\"7d9e144e24486a6668d151356ea4c9d4\";a:4:{i:0;s:9:\"Viewerdev\";i:1;a:5:{s:4:\"edit\";a:1:{s:5:\"pages\";a:1:{i:4;s:4:\"edit\";}}s:7:\"defVals\";N;s:12:\"overrideVals\";N;s:11:\"columnsOnly\";N;s:6:\"noView\";N;}i:2;s:28:\"&edit%5Bpages%5D%5B4%5D=edit\";i:3;a:5:{s:5:\"table\";s:5:\"pages\";s:3:\"uid\";i:4;s:3:\"pid\";i:1;s:3:\"cmd\";s:4:\"edit\";s:12:\"deleteAccess\";b:1;}}s:32:\"86205c5935270b8ee413592ec1b62292\";a:4:{i:0;s:6:\"Viewer\";i:1;a:5:{s:4:\"edit\";a:1:{s:12:\"sys_template\";a:1:{i:1;s:4:\"edit\";}}s:7:\"defVals\";N;s:12:\"overrideVals\";N;s:11:\"columnsOnly\";N;s:6:\"noView\";N;}i:2;s:35:\"&edit%5Bsys_template%5D%5B1%5D=edit\";i:3;a:5:{s:5:\"table\";s:12:\"sys_template\";s:3:\"uid\";i:1;s:3:\"pid\";i:1;s:3:\"cmd\";s:4:\"edit\";s:12:\"deleteAccess\";b:1;}}s:32:\"696addfecc296b326ff6e9f04c7ff3e1\";a:4:{i:0;s:6:\"Viewer\";i:1;a:5:{s:4:\"edit\";a:1:{s:5:\"pages\";a:1:{i:1;s:4:\"edit\";}}s:7:\"defVals\";N;s:12:\"overrideVals\";N;s:11:\"columnsOnly\";N;s:6:\"noView\";N;}i:2;s:28:\"&edit%5Bpages%5D%5B1%5D=edit\";i:3;a:5:{s:5:\"table\";s:5:\"pages\";s:3:\"uid\";i:1;s:3:\"pid\";i:0;s:3:\"cmd\";s:4:\"edit\";s:12:\"deleteAccess\";b:1;}}}i:1;s:32:\"457104654cd91c678ff07af47ccb1df2\";}s:57:\"TYPO3\\CMS\\Backend\\Utility\\BackendUtility::getUpdateSignal\";a:0:{}s:16:\"opendocs::recent\";a:8:{s:32:\"457104654cd91c678ff07af47ccb1df2\";a:4:{i:0;s:17:\"Solr Kern (PID 2)\";i:1;a:5:{s:4:\"edit\";a:1:{s:16:\"tx_dlf_solrcores\";a:1:{i:7;s:4:\"edit\";}}s:7:\"defVals\";N;s:12:\"overrideVals\";N;s:11:\"columnsOnly\";N;s:6:\"noView\";N;}i:2;s:39:\"&edit%5Btx_dlf_solrcores%5D%5B7%5D=edit\";i:3;a:5:{s:5:\"table\";s:16:\"tx_dlf_solrcores\";s:3:\"uid\";i:7;s:3:\"pid\";i:2;s:3:\"cmd\";s:4:\"edit\";s:12:\"deleteAccess\";b:1;}}s:32:\"66c91b4df6c608b2e122422f819a919a\";a:4:{i:0;s:0:\"\";i:1;a:5:{s:4:\"edit\";a:1:{s:16:\"tx_dlf_documents\";a:1:{i:1;s:4:\"edit\";}}s:7:\"defVals\";N;s:12:\"overrideVals\";N;s:11:\"columnsOnly\";N;s:6:\"noView\";N;}i:2;s:39:\"&edit%5Btx_dlf_documents%5D%5B1%5D=edit\";i:3;a:5:{s:5:\"table\";s:16:\"tx_dlf_documents\";s:3:\"uid\";i:1;s:3:\"pid\";i:2;s:3:\"cmd\";s:4:\"edit\";s:12:\"deleteAccess\";b:1;}}s:32:\"47e279c0b6f0ccf8306ae617df63a457\";a:4:{i:0;s:23:\"Sächsische Dorfzeitung\";i:1;a:5:{s:4:\"edit\";a:1:{s:16:\"tx_dlf_documents\";a:1:{i:2;s:4:\"edit\";}}s:7:\"defVals\";N;s:12:\"overrideVals\";N;s:11:\"columnsOnly\";N;s:6:\"noView\";N;}i:2;s:39:\"&edit%5Btx_dlf_documents%5D%5B2%5D=edit\";i:3;a:5:{s:5:\"table\";s:16:\"tx_dlf_documents\";s:3:\"uid\";i:2;s:3:\"pid\";i:2;s:3:\"cmd\";s:4:\"edit\";s:12:\"deleteAccess\";b:1;}}s:32:\"5a2f0abdf361aeac8ddbd983b0beade5\";a:4:{i:0;s:7:\"default\";i:1;a:5:{s:4:\"edit\";a:1:{s:16:\"tx_dlf_libraries\";a:1:{i:1;s:4:\"edit\";}}s:7:\"defVals\";N;s:12:\"overrideVals\";N;s:11:\"columnsOnly\";N;s:6:\"noView\";N;}i:2;s:39:\"&edit%5Btx_dlf_libraries%5D%5B1%5D=edit\";i:3;a:5:{s:5:\"table\";s:16:\"tx_dlf_libraries\";s:3:\"uid\";i:1;s:3:\"pid\";i:2;s:3:\"cmd\";s:4:\"edit\";s:12:\"deleteAccess\";b:1;}}s:32:\"202b4070a530d47bdfe4a8ab5414de41\";a:4:{i:0;s:17:\"Solr Kern (PID 2)\";i:1;a:5:{s:4:\"edit\";a:1:{s:16:\"tx_dlf_solrcores\";a:1:{i:4;s:4:\"edit\";}}s:7:\"defVals\";N;s:12:\"overrideVals\";N;s:11:\"columnsOnly\";N;s:6:\"noView\";N;}i:2;s:39:\"&edit%5Btx_dlf_solrcores%5D%5B4%5D=edit\";i:3;a:5:{s:5:\"table\";s:16:\"tx_dlf_solrcores\";s:3:\"uid\";i:4;s:3:\"pid\";i:2;s:3:\"cmd\";s:4:\"edit\";s:12:\"deleteAccess\";b:1;}}s:32:\"12090399dc664d017ad421a214218b61\";a:4:{i:0;s:8:\"dlfCore0\";i:1;a:5:{s:4:\"edit\";a:1:{s:16:\"tx_dlf_solrcores\";a:1:{i:6;s:4:\"edit\";}}s:7:\"defVals\";N;s:12:\"overrideVals\";N;s:11:\"columnsOnly\";N;s:6:\"noView\";N;}i:2;s:39:\"&edit%5Btx_dlf_solrcores%5D%5B6%5D=edit\";i:3;a:5:{s:5:\"table\";s:16:\"tx_dlf_solrcores\";s:3:\"uid\";i:6;s:3:\"pid\";i:0;s:3:\"cmd\";s:4:\"edit\";s:12:\"deleteAccess\";b:1;}}s:32:\"b7d1f761f300bd05a9e218690ea47184\";a:4:{i:0;s:16:\"newspaper-issues\";i:1;a:5:{s:4:\"edit\";a:1:{s:16:\"tx_dlf_solrcores\";a:1:{i:5;s:4:\"edit\";}}s:7:\"defVals\";N;s:12:\"overrideVals\";N;s:11:\"columnsOnly\";N;s:6:\"noView\";N;}i:2;s:39:\"&edit%5Btx_dlf_solrcores%5D%5B5%5D=edit\";i:3;a:5:{s:5:\"table\";s:16:\"tx_dlf_solrcores\";s:3:\"uid\";i:5;s:3:\"pid\";i:0;s:3:\"cmd\";s:4:\"edit\";s:12:\"deleteAccess\";b:1;}}s:32:\"d05de5db7a95716a106a7b65a59bfc32\";a:4:{i:0;s:6:\"Viewer\";i:1;a:5:{s:4:\"edit\";a:1:{s:12:\"sys_template\";a:1:{i:1;s:4:\"edit\";}}s:7:\"defVals\";N;s:12:\"overrideVals\";N;s:11:\"columnsOnly\";s:9:\"constants\";s:6:\"noView\";N;}i:2;s:57:\"&edit%5Bsys_template%5D%5B1%5D=edit&columnsOnly=constants\";i:3;a:5:{s:5:\"table\";s:12:\"sys_template\";s:3:\"uid\";i:1;s:3:\"pid\";i:1;s:3:\"cmd\";s:4:\"edit\";s:12:\"deleteAccess\";b:1;}}}s:47:\"TYPO3\\CMS\\Belog\\Controller\\BackendLogController\";s:337:\"O:39:\"TYPO3\\CMS\\Belog\\Domain\\Model\\Constraint\":11:{s:14:\"\0*\0userOrGroup\";s:1:\"0\";s:9:\"\0*\0number\";i:20;s:15:\"\0*\0workspaceUid\";i:-99;s:10:\"\0*\0channel\";s:3:\"php\";s:8:\"\0*\0level\";s:5:\"debug\";s:17:\"\0*\0startTimestamp\";i:0;s:15:\"\0*\0endTimestamp\";i:0;s:18:\"\0*\0manualDateStart\";N;s:17:\"\0*\0manualDateStop\";N;s:9:\"\0*\0pageId\";i:0;s:8:\"\0*\0depth\";i:0;}\";s:9:\"file_list\";a:3:{s:8:\"function\";N;s:8:\"language\";N;s:19:\"constant_editor_cat\";N;}s:9:\"tx_beuser\";a:2:{s:15:\"compareUserList\";a:0:{}s:6:\"demand\";a:5:{s:8:\"userName\";s:0:\"\";s:8:\"userType\";i:0;s:6:\"status\";i:0;s:6:\"logins\";i:0;s:16:\"backendUserGroup\";i:0;}}s:8:\"web_info\";a:3:{s:8:\"function\";s:48:\"TYPO3\\CMS\\Belog\\Module\\BackendLogModuleBootstrap\";s:8:\"language\";N;s:19:\"constant_editor_cat\";N;}s:4:\"list\";a:2:{s:8:\"be_users\";s:1:\"1\";s:16:\"tx_dlf_solrcores\";s:1:\"0\";}}s:14:\"emailMeAtLogin\";i:0;s:8:\"titleLen\";i:50;s:8:\"edit_RTE\";s:1:\"1\";s:20:\"edit_docModuleUpload\";s:1:\"1\";s:25:\"resizeTextareas_MaxHeight\";i:500;s:4:\"lang\";s:7:\"default\";s:19:\"firstLoginTimeStamp\";i:1719407155;s:15:\"moduleSessionID\";a:11:{s:12:\"system_dbint\";s:40:\"6dbb395c23559c9ff20228c8951a961744064097\";s:10:\"web_layout\";s:40:\"4c7765043f318251aa68e74974a968b8b38e5863\";s:8:\"web_list\";s:40:\"4c7765043f318251aa68e74974a968b8b38e5863\";s:6:\"web_ts\";s:40:\"86dcf5776e56b6dd66c9efed2933a28045fe21ee\";s:10:\"FormEngine\";s:40:\"86dcf5776e56b6dd66c9efed2933a28045fe21ee\";s:57:\"TYPO3\\CMS\\Backend\\Utility\\BackendUtility::getUpdateSignal\";s:40:\"86dcf5776e56b6dd66c9efed2933a28045fe21ee\";s:16:\"opendocs::recent\";s:40:\"86dcf5776e56b6dd66c9efed2933a28045fe21ee\";s:47:\"TYPO3\\CMS\\Belog\\Controller\\BackendLogController\";s:40:\"86dcf5776e56b6dd66c9efed2933a28045fe21ee\";s:9:\"file_list\";s:40:\"63872a1c30a9c0271ba8680867a836f84e998ca8\";s:9:\"tx_beuser\";s:40:\"6dbb395c23559c9ff20228c8951a961744064097\";s:8:\"web_info\";s:40:\"6dbb395c23559c9ff20228c8951a961744064097\";}s:17:\"BackendComponents\";a:1:{s:6:\"States\";a:3:{s:8:\"Pagetree\";a:1:{s:9:\"stateHash\";a:1:{s:3:\"0_1\";s:1:\"1\";}}s:17:\"typo3-module-menu\";a:1:{s:9:\"collapsed\";s:5:\"false\";}s:15:\"FileStorageTree\";a:1:{s:9:\"stateHash\";a:2:{s:10:\"1_59663721\";s:1:\"1\";s:11:\"1_130865399\";s:1:\"1\";}}}}s:7:\"reports\";a:1:{s:9:\"selection\";a:2:{s:9:\"extension\";s:0:\"\";s:6:\"report\";s:0:\"\";}}s:10:\"inlineView\";s:61:\"{\"tx_dlf_metadata\":{\"13\":{\"tx_dlf_metadataformat\":{\"2\":\"\"}}}}\";s:10:\"navigation\";a:1:{s:5:\"width\";s:3:\"300\";}s:10:\"modulemenu\";s:2:\"{}\";s:17:\"systeminformation\";s:45:\"{\"system_BelogLog\":{\"lastAccess\":1731066939}}\";}',NULL,NULL,1,NULL,1732633604,0,NULL,'',NULL);
-/*!40000 ALTER TABLE `be_users` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `fe_groups`
 --
 
@@ -174,7 +116,6 @@ CREATE TABLE `fe_groups` (
   `pid` int(10) unsigned NOT NULL DEFAULT 0,
   `tstamp` int(10) unsigned NOT NULL DEFAULT 0,
   `crdate` int(10) unsigned NOT NULL DEFAULT 0,
-  `cruser_id` int(10) unsigned NOT NULL DEFAULT 0,
   `deleted` smallint(5) unsigned NOT NULL DEFAULT 0,
   `hidden` smallint(5) unsigned NOT NULL DEFAULT 0,
   `description` text DEFAULT NULL,
@@ -198,67 +139,6 @@ LOCK TABLES `fe_groups` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `fe_users`
---
-
-DROP TABLE IF EXISTS `fe_users`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `fe_users` (
-  `uid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `pid` int(10) unsigned NOT NULL DEFAULT 0,
-  `tstamp` int(10) unsigned NOT NULL DEFAULT 0,
-  `crdate` int(10) unsigned NOT NULL DEFAULT 0,
-  `cruser_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `deleted` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `disable` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `starttime` int(10) unsigned NOT NULL DEFAULT 0,
-  `endtime` int(10) unsigned NOT NULL DEFAULT 0,
-  `description` text DEFAULT NULL,
-  `tx_extbase_type` varchar(255) NOT NULL DEFAULT '0',
-  `username` varchar(255) NOT NULL DEFAULT '',
-  `password` varchar(100) NOT NULL DEFAULT '',
-  `usergroup` text DEFAULT NULL,
-  `name` varchar(160) NOT NULL DEFAULT '',
-  `first_name` varchar(50) NOT NULL DEFAULT '',
-  `middle_name` varchar(50) NOT NULL DEFAULT '',
-  `last_name` varchar(50) NOT NULL DEFAULT '',
-  `address` varchar(255) NOT NULL DEFAULT '',
-  `telephone` varchar(30) NOT NULL DEFAULT '',
-  `fax` varchar(30) NOT NULL DEFAULT '',
-  `email` varchar(255) NOT NULL DEFAULT '',
-  `uc` blob DEFAULT NULL,
-  `title` varchar(40) NOT NULL DEFAULT '',
-  `zip` varchar(10) NOT NULL DEFAULT '',
-  `city` varchar(50) NOT NULL DEFAULT '',
-  `country` varchar(40) NOT NULL DEFAULT '',
-  `www` varchar(80) NOT NULL DEFAULT '',
-  `company` varchar(80) NOT NULL DEFAULT '',
-  `image` tinytext DEFAULT NULL,
-  `TSconfig` text DEFAULT NULL,
-  `lastlogin` int(10) unsigned NOT NULL DEFAULT 0,
-  `is_online` int(10) unsigned NOT NULL DEFAULT 0,
-  `felogin_redirectPid` tinytext DEFAULT NULL,
-  `felogin_forgotHash` varchar(80) DEFAULT '',
-  `mfa` mediumblob DEFAULT NULL,
-  PRIMARY KEY (`uid`),
-  KEY `parent` (`pid`,`username`(100)),
-  KEY `username` (`username`(100)),
-  KEY `is_online` (`is_online`),
-  KEY `felogin_forgotHash` (`felogin_forgotHash`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `fe_users`
---
-
-LOCK TABLES `fe_users` WRITE;
-/*!40000 ALTER TABLE `fe_users` DISABLE KEYS */;
-/*!40000 ALTER TABLE `fe_users` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `pages`
 --
 
@@ -267,10 +147,9 @@ DROP TABLE IF EXISTS `pages`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `pages` (
   `uid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `pid` int(11) NOT NULL DEFAULT 0,
+  `pid` int(10) unsigned NOT NULL DEFAULT 0,
   `tstamp` int(10) unsigned NOT NULL DEFAULT 0,
   `crdate` int(10) unsigned NOT NULL DEFAULT 0,
-  `cruser_id` int(10) unsigned NOT NULL DEFAULT 0,
   `deleted` smallint(5) unsigned NOT NULL DEFAULT 0,
   `hidden` smallint(5) unsigned NOT NULL DEFAULT 0,
   `starttime` int(10) unsigned NOT NULL DEFAULT 0,
@@ -307,11 +186,11 @@ CREATE TABLE `pages` (
   `layout` int(10) unsigned NOT NULL DEFAULT 0,
   `target` varchar(80) NOT NULL DEFAULT '',
   `media` int(10) unsigned NOT NULL DEFAULT 0,
-  `lastUpdated` int(10) unsigned NOT NULL DEFAULT 0,
+  `lastUpdated` int(11) NOT NULL DEFAULT 0,
   `keywords` text DEFAULT NULL,
   `cache_timeout` int(10) unsigned NOT NULL DEFAULT 0,
   `cache_tags` varchar(255) NOT NULL DEFAULT '',
-  `newUntil` int(10) unsigned NOT NULL DEFAULT 0,
+  `newUntil` int(11) NOT NULL DEFAULT 0,
   `description` text DEFAULT NULL,
   `no_search` smallint(5) unsigned NOT NULL DEFAULT 0,
   `SYS_LASTCHANGED` int(10) unsigned NOT NULL DEFAULT 0,
@@ -326,7 +205,6 @@ CREATE TABLE `pages` (
   `mount_pid` int(10) unsigned NOT NULL DEFAULT 0,
   `mount_pid_ol` smallint(6) NOT NULL DEFAULT 0,
   `l18n_cfg` smallint(6) NOT NULL DEFAULT 0,
-  `fe_login_mode` smallint(6) NOT NULL DEFAULT 0,
   `backend_layout` varchar(64) NOT NULL DEFAULT '',
   `backend_layout_next_level` varchar(64) NOT NULL DEFAULT '',
   `tsconfig_includes` text DEFAULT NULL,
@@ -362,10 +240,10 @@ CREATE TABLE `pages` (
 LOCK TABLES `pages` WRITE;
 /*!40000 ALTER TABLE `pages` DISABLE KEYS */;
 INSERT INTO `pages` VALUES
-(1,0,1629185218,1628166633,1,0,0,0,0,'',256,'',0,0,0,0,NULL,0,'{\"doktype\":null,\"title\":null,\"slug\":null,\"nav_title\":null,\"subtitle\":null,\"seo_title\":null,\"no_index\":null,\"no_follow\":null,\"canonical_link\":null,\"og_title\":null,\"og_description\":null,\"og_image\":null,\"twitter_title\":null,\"twitter_description\":null,\"twitter_image\":null,\"abstract\":null,\"keywords\":null,\"description\":null,\"author\":null,\"author_email\":null,\"lastUpdated\":null,\"layout\":null,\"newUntil\":null,\"backend_layout\":null,\"backend_layout_next_level\":null,\"content_from_pid\":null,\"target\":null,\"cache_timeout\":null,\"cache_tags\":null,\"is_siteroot\":null,\"no_search\":null,\"php_tree_stop\":null,\"module\":null,\"media\":null,\"tsconfig_includes\":null,\"TSconfig\":null,\"l18n_cfg\":null,\"hidden\":null,\"nav_hide\":null,\"starttime\":null,\"endtime\":null,\"extendToSubpages\":null,\"fe_group\":null,\"fe_login_mode\":null,\"editlock\":null,\"categories\":null,\"rowDescription\":null}',0,0,0,0,1,0,31,27,0,'Viewer','/',1,'',1,0,'',0,0,'',0,'',0,0,'',0,'',0,'',1,1629185218,'','',0,'','','',0,0,0,0,0,0,'','','',0,'',0,0,'','',0,'','',0,'',0,0.5,'',''),
-(2,1,1629184744,1628486511,1,0,0,0,0,'0',256,NULL,0,0,0,0,NULL,0,'{\"hidden\":null}',0,0,0,0,1,0,31,27,0,'Kitodo Konfiguration','/1',254,NULL,0,0,'',0,0,'',0,'',0,0,NULL,0,'',0,NULL,0,0,NULL,'',0,'','','',0,0,0,0,0,0,'','',NULL,0,'',0,0,'',NULL,0,'',NULL,0,'',0,0.5,'',''),
-(3,0,1630422840,1630422828,3,0,0,0,0,'',256,NULL,0,1,1,1,'{\"starttime\":\"parent\",\"endtime\":\"parent\",\"nav_hide\":\"parent\",\"url\":\"parent\",\"lastUpdated\":\"parent\",\"newUntil\":\"parent\",\"no_search\":\"parent\",\"shortcut\":\"parent\",\"shortcut_mode\":\"parent\",\"content_from_pid\":\"parent\",\"author\":\"parent\",\"author_email\":\"parent\",\"media\":\"parent\",\"og_image\":\"parent\",\"twitter_image\":\"parent\"}',0,'{\"doktype\":1,\"title\":\"Viewer\",\"slug\":\"\\/\",\"nav_title\":\"\",\"subtitle\":\"\",\"seo_title\":\"\",\"canonical_link\":\"\",\"og_title\":\"\",\"og_description\":\"\",\"twitter_title\":\"\",\"twitter_description\":\"\",\"abstract\":\"\",\"keywords\":\"\",\"description\":\"\",\"hidden\":0,\"categories\":0,\"rowDescription\":\"\",\"TSconfig\":\"\",\"php_tree_stop\":0,\"editlock\":0,\"layout\":0,\"fe_group\":\"\",\"extendToSubpages\":0,\"target\":\"\",\"alias\":\"\",\"cache_timeout\":0,\"cache_tags\":\"\",\"mount_pid\":0,\"is_siteroot\":1,\"mount_pid_ol\":0,\"module\":\"\",\"fe_login_mode\":0,\"l18n_cfg\":0,\"backend_layout\":\"\",\"backend_layout_next_level\":\"\",\"tsconfig_includes\":\"\",\"no_index\":0,\"no_follow\":0}',0,0,0,0,1,0,31,27,0,'[Translate to English:] Viewer','/',1,'',1,0,'',0,0,'',0,'',0,0,NULL,0,'',0,NULL,1,1630422840,NULL,'',0,'','','',0,0,0,0,0,0,'','','',0,'',0,0,'',NULL,0,'',NULL,0,'',0,0.5,'',''),
-(4,1,1718879470,1630500948,3,0,0,0,0,'',128,'',0,0,0,0,NULL,0,'{\"hidden\":null}',0,0,0,0,3,0,31,27,0,'Viewerdev','/viewerdev',1,'',0,0,'',0,0,'',0,'',0,0,'',0,'',0,'',0,1718879470,'','',0,'','','',0,0,0,0,0,0,'','','',0,'',0,0,'','',0,'','',0,'',0,0.5,'','');
+(1,0,1629185218,1628166633,0,0,0,0,'',256,'',0,0,0,0,NULL,0,'{\"doktype\":null,\"title\":null,\"slug\":null,\"nav_title\":null,\"subtitle\":null,\"seo_title\":null,\"no_index\":null,\"no_follow\":null,\"canonical_link\":null,\"og_title\":null,\"og_description\":null,\"og_image\":null,\"twitter_title\":null,\"twitter_description\":null,\"twitter_image\":null,\"abstract\":null,\"keywords\":null,\"description\":null,\"author\":null,\"author_email\":null,\"lastUpdated\":null,\"layout\":null,\"newUntil\":null,\"backend_layout\":null,\"backend_layout_next_level\":null,\"content_from_pid\":null,\"target\":null,\"cache_timeout\":null,\"cache_tags\":null,\"is_siteroot\":null,\"no_search\":null,\"php_tree_stop\":null,\"module\":null,\"media\":null,\"tsconfig_includes\":null,\"TSconfig\":null,\"l18n_cfg\":null,\"hidden\":null,\"nav_hide\":null,\"starttime\":null,\"endtime\":null,\"extendToSubpages\":null,\"fe_group\":null,\"fe_login_mode\":null,\"editlock\":null,\"categories\":null,\"rowDescription\":null}',0,0,0,0,1,0,31,27,0,'Viewer','/',1,'',1,0,'',0,0,'',0,'',0,0,'',0,'',0,'',1,1629185218,'','',0,'','','',0,0,0,0,0,'','','',0,'',0,0,'','',0,'','',0,'',0,0.5,'',''),
+(2,1,1629184744,1628486511,0,0,0,0,'0',256,NULL,0,0,0,0,NULL,0,'{\"hidden\":null}',0,0,0,0,1,0,31,27,0,'Kitodo Konfiguration','/1',254,NULL,0,0,'',0,0,'',0,'',0,0,NULL,0,'',0,NULL,0,0,NULL,'',0,'','','',0,0,0,0,0,'','',NULL,0,'',0,0,'',NULL,0,'',NULL,0,'',0,0.5,'',''),
+(3,0,1630422840,1630422828,0,0,0,0,'',256,NULL,0,1,1,1,'{\"starttime\":\"parent\",\"endtime\":\"parent\",\"nav_hide\":\"parent\",\"url\":\"parent\",\"lastUpdated\":\"parent\",\"newUntil\":\"parent\",\"no_search\":\"parent\",\"shortcut\":\"parent\",\"shortcut_mode\":\"parent\",\"content_from_pid\":\"parent\",\"author\":\"parent\",\"author_email\":\"parent\",\"media\":\"parent\",\"og_image\":\"parent\",\"twitter_image\":\"parent\"}',0,'{\"doktype\":1,\"title\":\"Viewer\",\"slug\":\"\\/\",\"nav_title\":\"\",\"subtitle\":\"\",\"seo_title\":\"\",\"canonical_link\":\"\",\"og_title\":\"\",\"og_description\":\"\",\"twitter_title\":\"\",\"twitter_description\":\"\",\"abstract\":\"\",\"keywords\":\"\",\"description\":\"\",\"hidden\":0,\"categories\":0,\"rowDescription\":\"\",\"TSconfig\":\"\",\"php_tree_stop\":0,\"editlock\":0,\"layout\":0,\"fe_group\":\"\",\"extendToSubpages\":0,\"target\":\"\",\"alias\":\"\",\"cache_timeout\":0,\"cache_tags\":\"\",\"mount_pid\":0,\"is_siteroot\":1,\"mount_pid_ol\":0,\"module\":\"\",\"fe_login_mode\":0,\"l18n_cfg\":0,\"backend_layout\":\"\",\"backend_layout_next_level\":\"\",\"tsconfig_includes\":\"\",\"no_index\":0,\"no_follow\":0}',0,0,0,0,1,0,31,27,0,'[Translate to English:] Viewer','/',1,'',1,0,'',0,0,'',0,'',0,0,NULL,0,'',0,NULL,1,1630422840,NULL,'',0,'','','',0,0,0,0,0,'','','',0,'',0,0,'',NULL,0,'',NULL,0,'',0,0.5,'',''),
+(4,1,1718879470,1630500948,0,0,0,0,'',128,'',0,0,0,0,NULL,0,'{\"hidden\":null}',0,0,0,0,3,0,31,27,0,'Viewerdev','/viewerdev',1,'',0,0,'',0,0,'',0,'',0,0,'',0,'',0,'',0,1718879470,'','',0,'','','',0,0,0,0,0,'','','',0,'',0,0,'','',0,'','',0,'',0,0.5,'','');
 /*!40000 ALTER TABLE `pages` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -407,10 +285,9 @@ DROP TABLE IF EXISTS `sys_category`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `sys_category` (
   `uid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `pid` int(11) NOT NULL DEFAULT 0,
+  `pid` int(10) unsigned NOT NULL DEFAULT 0,
   `tstamp` int(10) unsigned NOT NULL DEFAULT 0,
   `crdate` int(10) unsigned NOT NULL DEFAULT 0,
-  `cruser_id` int(10) unsigned NOT NULL DEFAULT 0,
   `deleted` smallint(5) unsigned NOT NULL DEFAULT 0,
   `hidden` smallint(5) unsigned NOT NULL DEFAULT 0,
   `starttime` int(10) unsigned NOT NULL DEFAULT 0,
@@ -456,10 +333,11 @@ DROP TABLE IF EXISTS `sys_category_record_mm`;
 CREATE TABLE `sys_category_record_mm` (
   `uid_local` int(10) unsigned NOT NULL DEFAULT 0,
   `uid_foreign` int(10) unsigned NOT NULL DEFAULT 0,
-  `tablenames` varchar(255) NOT NULL DEFAULT '',
-  `fieldname` varchar(255) NOT NULL DEFAULT '',
+  `tablenames` varchar(64) NOT NULL DEFAULT '',
+  `fieldname` varchar(64) NOT NULL DEFAULT '',
   `sorting` int(10) unsigned NOT NULL DEFAULT 0,
   `sorting_foreign` int(10) unsigned NOT NULL DEFAULT 0,
+  PRIMARY KEY (`uid_local`,`uid_foreign`,`tablenames`,`fieldname`),
   KEY `uid_local` (`uid_local`),
   KEY `uid_foreign` (`uid_foreign`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -472,6 +350,34 @@ CREATE TABLE `sys_category_record_mm` (
 LOCK TABLES `sys_category_record_mm` WRITE;
 /*!40000 ALTER TABLE `sys_category_record_mm` DISABLE KEYS */;
 /*!40000 ALTER TABLE `sys_category_record_mm` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sys_csp_resolution`
+--
+
+DROP TABLE IF EXISTS `sys_csp_resolution`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sys_csp_resolution` (
+  `summary` varchar(40) NOT NULL,
+  `created` int(10) unsigned NOT NULL,
+  `scope` varchar(264) NOT NULL,
+  `mutation_identifier` text DEFAULT NULL,
+  `mutation_collection` mediumtext DEFAULT NULL,
+  `meta` mediumtext DEFAULT NULL,
+  PRIMARY KEY (`summary`),
+  KEY `created` (`created`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sys_csp_resolution`
+--
+
+LOCK TABLES `sys_csp_resolution` WRITE;
+/*!40000 ALTER TABLE `sys_csp_resolution` DISABLE KEYS */;
+/*!40000 ALTER TABLE `sys_csp_resolution` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -507,7 +413,7 @@ CREATE TABLE `sys_file` (
   KEY `lastindex` (`last_indexed`),
   KEY `sha1` (`sha1`),
   KEY `parent` (`pid`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -522,7 +428,8 @@ INSERT INTO `sys_file` VALUES
 (3,0,1719411342,1719411342,0,0,'5',0,'/typo3conf/ext/dlf/Resources/Private/Data/MetadataDefaults.json','43e7e960c99930eb6be886f0abce0a3d69b7ef8f','1bcba67d92bc736363c57bbe2c98b91eefec7981','json','application/json','MetadataDefaults.json','1badc9c505a9180fa5b680a9654a1b443ef75c24',21572,1719332026,1719332026),
 (4,0,1723635869,1723635869,0,1,'5',0,'/user_upload/index.html','c25533f303185517ca3e1e24b215d53aa74076d2','19669f1e02c2f16705ec7587044c66443be70725','html','application/x-empty','index.html','da39a3ee5e6b4b0d3255bfef95601890afd80709',0,1718719998,1718719998),
 (5,0,1723635871,1723635871,0,1,'1',0,'/_temp_/index.html','1cd5eec12b9b11599c0b4c6b2d43342c4fb53a7b','0258f8a5f703dd44c350fbfcddeecb1634d46ad4','html','text/html','index.html','344e8d2f838769251206d105d6977c1e6b5dab44',110,1718719998,1718719998),
-(6,0,1723635878,1723635878,0,1,'1',0,'/user_upload/_temp_/importexport/index.html','68614dc2826769e93d8a8ead62af30ac99aaa83a','0795cf796b4fc959be0ec00b183c0f47609dd9a5','html','text/html','index.html','344e8d2f838769251206d105d6977c1e6b5dab44',110,1718719998,1718719998);
+(6,0,1723635878,1723635878,0,1,'1',0,'/user_upload/_temp_/importexport/index.html','68614dc2826769e93d8a8ead62af30ac99aaa83a','0795cf796b4fc959be0ec00b183c0f47609dd9a5','html','text/html','index.html','344e8d2f838769251206d105d6977c1e6b5dab44',110,1718719998,1718719998),
+(7,0,1735316319,1735316319,0,1,'5',0,'/user_upload/_temp_/index.html','a3ef597b554ed2a28c720b3e90e51edc9ec642b1','4e0743c93934dd9a02564d8e654d714bd2dc3d20','html','application/x-empty','index.html','da39a3ee5e6b4b0d3255bfef95601890afd80709',0,1732886273,1718719998);
 /*!40000 ALTER TABLE `sys_file` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -535,10 +442,9 @@ DROP TABLE IF EXISTS `sys_file_collection`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `sys_file_collection` (
   `uid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `pid` int(11) NOT NULL DEFAULT 0,
+  `pid` int(10) unsigned NOT NULL DEFAULT 0,
   `tstamp` int(10) unsigned NOT NULL DEFAULT 0,
   `crdate` int(10) unsigned NOT NULL DEFAULT 0,
-  `cruser_id` int(10) unsigned NOT NULL DEFAULT 0,
   `deleted` smallint(5) unsigned NOT NULL DEFAULT 0,
   `hidden` smallint(5) unsigned NOT NULL DEFAULT 0,
   `starttime` int(10) unsigned NOT NULL DEFAULT 0,
@@ -556,10 +462,9 @@ CREATE TABLE `sys_file_collection` (
   `title` tinytext DEFAULT NULL,
   `type` varchar(30) NOT NULL DEFAULT 'static',
   `files` int(11) NOT NULL DEFAULT 0,
-  `storage` int(11) NOT NULL DEFAULT 0,
-  `folder` text DEFAULT NULL,
   `recursive` smallint(6) NOT NULL DEFAULT 0,
   `category` int(10) unsigned NOT NULL DEFAULT 0,
+  `folder_identifier` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`uid`),
   KEY `parent` (`pid`,`deleted`,`hidden`),
   KEY `t3ver_oid` (`t3ver_oid`,`t3ver_wsid`)
@@ -584,10 +489,9 @@ DROP TABLE IF EXISTS `sys_file_metadata`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `sys_file_metadata` (
   `uid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `pid` int(11) NOT NULL DEFAULT 0,
+  `pid` int(10) unsigned NOT NULL DEFAULT 0,
   `tstamp` int(10) unsigned NOT NULL DEFAULT 0,
   `crdate` int(10) unsigned NOT NULL DEFAULT 0,
-  `cruser_id` int(10) unsigned NOT NULL DEFAULT 0,
   `sys_language_uid` int(11) NOT NULL DEFAULT 0,
   `l10n_parent` int(10) unsigned NOT NULL DEFAULT 0,
   `l10n_state` text DEFAULT NULL,
@@ -609,7 +513,7 @@ CREATE TABLE `sys_file_metadata` (
   KEY `fal_filelist` (`l10n_parent`,`sys_language_uid`),
   KEY `parent` (`pid`),
   KEY `t3ver_oid` (`t3ver_oid`,`t3ver_wsid`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -619,12 +523,13 @@ CREATE TABLE `sys_file_metadata` (
 LOCK TABLES `sys_file_metadata` WRITE;
 /*!40000 ALTER TABLE `sys_file_metadata` DISABLE KEYS */;
 INSERT INTO `sys_file_metadata` VALUES
-(1,0,1719411342,1719411342,3,0,0,NULL,0,'',0,0,0,0,1,NULL,0,0,NULL,NULL,0),
-(2,0,1719411342,1719411342,3,0,0,NULL,0,'',0,0,0,0,2,NULL,0,0,NULL,NULL,0),
-(3,0,1719411342,1719411342,3,0,0,NULL,0,'',0,0,0,0,3,NULL,0,0,NULL,NULL,0),
-(4,0,1723635869,1723635869,3,0,0,NULL,0,'',0,0,0,0,4,NULL,0,0,NULL,NULL,0),
-(5,0,1723635871,1723635871,3,0,0,NULL,0,'',0,0,0,0,5,NULL,0,0,NULL,NULL,0),
-(6,0,1723635878,1723635878,3,0,0,NULL,0,'',0,0,0,0,6,NULL,0,0,NULL,NULL,0);
+(1,0,1719411342,1719411342,0,0,NULL,0,'',0,0,0,0,1,NULL,0,0,NULL,NULL,0),
+(2,0,1719411342,1719411342,0,0,NULL,0,'',0,0,0,0,2,NULL,0,0,NULL,NULL,0),
+(3,0,1719411342,1719411342,0,0,NULL,0,'',0,0,0,0,3,NULL,0,0,NULL,NULL,0),
+(4,0,1723635869,1723635869,0,0,NULL,0,'',0,0,0,0,4,NULL,0,0,NULL,NULL,0),
+(5,0,1723635871,1723635871,0,0,NULL,0,'',0,0,0,0,5,NULL,0,0,NULL,NULL,0),
+(6,0,1723635878,1723635878,0,0,NULL,0,'',0,0,0,0,6,NULL,0,0,NULL,NULL,0),
+(7,0,1735316319,1735316319,0,0,NULL,0,'',0,0,0,0,7,NULL,0,0,NULL,NULL,0);
 /*!40000 ALTER TABLE `sys_file_metadata` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -637,10 +542,9 @@ DROP TABLE IF EXISTS `sys_file_reference`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `sys_file_reference` (
   `uid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `pid` int(11) NOT NULL DEFAULT 0,
+  `pid` int(10) unsigned NOT NULL DEFAULT 0,
   `tstamp` int(10) unsigned NOT NULL DEFAULT 0,
   `crdate` int(10) unsigned NOT NULL DEFAULT 0,
-  `cruser_id` int(10) unsigned NOT NULL DEFAULT 0,
   `deleted` smallint(5) unsigned NOT NULL DEFAULT 0,
   `hidden` smallint(5) unsigned NOT NULL DEFAULT 0,
   `sys_language_uid` int(11) NOT NULL DEFAULT 0,
@@ -656,7 +560,6 @@ CREATE TABLE `sys_file_reference` (
   `tablenames` varchar(64) NOT NULL DEFAULT '',
   `fieldname` varchar(64) NOT NULL DEFAULT '',
   `sorting_foreign` int(11) NOT NULL DEFAULT 0,
-  `table_local` varchar(64) NOT NULL DEFAULT '',
   `title` tinytext DEFAULT NULL,
   `description` text DEFAULT NULL,
   `alternative` text DEFAULT NULL,
@@ -695,7 +598,6 @@ CREATE TABLE `sys_file_storage` (
   `pid` int(10) unsigned NOT NULL DEFAULT 0,
   `tstamp` int(10) unsigned NOT NULL DEFAULT 0,
   `crdate` int(10) unsigned NOT NULL DEFAULT 0,
-  `cruser_id` int(10) unsigned NOT NULL DEFAULT 0,
   `deleted` smallint(5) unsigned NOT NULL DEFAULT 0,
   `description` text DEFAULT NULL,
   `name` varchar(255) NOT NULL DEFAULT '',
@@ -720,7 +622,7 @@ CREATE TABLE `sys_file_storage` (
 LOCK TABLES `sys_file_storage` WRITE;
 /*!40000 ALTER TABLE `sys_file_storage` DISABLE KEYS */;
 INSERT INTO `sys_file_storage` VALUES
-(1,0,1628075892,1628075892,0,0,'This is the local fileadmin/ directory. This storage mount has been created automatically by TYPO3.','fileadmin/ (auto-created)','Local','<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>\n<T3FlexForms>\n    <data>\n        <sheet index=\"sDEF\">\n            <language index=\"lDEF\">\n                <field index=\"basePath\">\n                    <value index=\"vDEF\">fileadmin/</value>\n                </field>\n                <field index=\"pathType\">\n                    <value index=\"vDEF\">relative</value>\n                </field>\n                <field index=\"caseSensitive\">\n                    <value index=\"vDEF\">1</value>\n                </field>\n            </language>\n        </sheet>\n    </data>\n</T3FlexForms>',1,1,1,1,1,1,NULL);
+(1,0,1628075892,1628075892,0,'This is the local fileadmin/ directory. This storage mount has been created automatically by TYPO3.','fileadmin/ (auto-created)','Local','<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>\n<T3FlexForms>\n    <data>\n        <sheet index=\"sDEF\">\n            <language index=\"lDEF\">\n                <field index=\"basePath\">\n                    <value index=\"vDEF\">fileadmin/</value>\n                </field>\n                <field index=\"pathType\">\n                    <value index=\"vDEF\">relative</value>\n                </field>\n                <field index=\"caseSensitive\">\n                    <value index=\"vDEF\">1</value>\n                </field>\n            </language>\n        </sheet>\n    </data>\n</T3FlexForms>',1,1,1,1,1,1,NULL);
 /*!40000 ALTER TABLE `sys_file_storage` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -740,9 +642,8 @@ CREATE TABLE `sys_filemounts` (
   `sorting` int(11) NOT NULL DEFAULT 0,
   `description` text DEFAULT NULL,
   `title` varchar(255) NOT NULL DEFAULT '',
-  `path` varchar(255) NOT NULL DEFAULT '',
-  `base` int(10) unsigned NOT NULL DEFAULT 0,
   `read_only` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `identifier` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`uid`),
   KEY `parent` (`pid`,`deleted`,`hidden`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -758,35 +659,40 @@ LOCK TABLES `sys_filemounts` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `sys_language`
+-- Table structure for table `sys_http_report`
 --
 
-DROP TABLE IF EXISTS `sys_language`;
+DROP TABLE IF EXISTS `sys_http_report`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `sys_language` (
-  `uid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `pid` int(10) unsigned NOT NULL DEFAULT 0,
-  `tstamp` int(10) unsigned NOT NULL DEFAULT 0,
-  `hidden` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `sorting` int(11) NOT NULL DEFAULT 0,
-  `title` varchar(80) NOT NULL DEFAULT '',
-  `flag` varchar(20) NOT NULL DEFAULT '',
-  `language_isocode` varchar(2) NOT NULL DEFAULT '',
-  PRIMARY KEY (`uid`),
-  KEY `parent` (`pid`,`hidden`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE `sys_http_report` (
+  `uuid` varchar(36) NOT NULL,
+  `status` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `created` int(10) unsigned NOT NULL,
+  `changed` int(10) unsigned NOT NULL,
+  `type` varchar(32) NOT NULL,
+  `scope` varchar(100) NOT NULL,
+  `request_time` bigint(20) unsigned NOT NULL,
+  `meta` mediumtext DEFAULT NULL,
+  `details` mediumtext DEFAULT NULL,
+  `summary` varchar(40) NOT NULL,
+  PRIMARY KEY (`uuid`),
+  KEY `type_scope` (`type`,`scope`),
+  KEY `created` (`created`),
+  KEY `changed` (`changed`),
+  KEY `request_time` (`request_time`),
+  KEY `summary_created` (`summary`,`created`),
+  KEY `all_conditions` (`type`,`status`,`scope`,`summary`,`request_time`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `sys_language`
+-- Dumping data for table `sys_http_report`
 --
 
-LOCK TABLES `sys_language` WRITE;
-/*!40000 ALTER TABLE `sys_language` DISABLE KEYS */;
-INSERT INTO `sys_language` VALUES
-(1,0,1628487239,0,256,'English','us','en');
-/*!40000 ALTER TABLE `sys_language` ENABLE KEYS */;
+LOCK TABLES `sys_http_report` WRITE;
+/*!40000 ALTER TABLE `sys_http_report` DISABLE KEYS */;
+/*!40000 ALTER TABLE `sys_http_report` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -807,7 +713,7 @@ CREATE TABLE `sys_lockedrecords` (
   `feuserid` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`uid`),
   KEY `event` (`userid`,`tstamp`)
-) ENGINE=InnoDB AUTO_INCREMENT=114 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -817,6 +723,37 @@ CREATE TABLE `sys_lockedrecords` (
 LOCK TABLES `sys_lockedrecords` WRITE;
 /*!40000 ALTER TABLE `sys_lockedrecords` DISABLE KEYS */;
 /*!40000 ALTER TABLE `sys_lockedrecords` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sys_messenger_messages`
+--
+
+DROP TABLE IF EXISTS `sys_messenger_messages`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sys_messenger_messages` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `body` longtext NOT NULL,
+  `headers` longtext NOT NULL,
+  `queue_name` varchar(190) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `available_at` datetime NOT NULL,
+  `delivered_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `queue_name` (`queue_name`),
+  KEY `available_at` (`available_at`),
+  KEY `delivered_at` (`delivered_at`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sys_messenger_messages`
+--
+
+LOCK TABLES `sys_messenger_messages` WRITE;
+/*!40000 ALTER TABLE `sys_messenger_messages` DISABLE KEYS */;
+/*!40000 ALTER TABLE `sys_messenger_messages` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -831,7 +768,6 @@ CREATE TABLE `sys_news` (
   `pid` int(10) unsigned NOT NULL DEFAULT 0,
   `tstamp` int(10) unsigned NOT NULL DEFAULT 0,
   `crdate` int(10) unsigned NOT NULL DEFAULT 0,
-  `cruser_id` int(10) unsigned NOT NULL DEFAULT 0,
   `deleted` smallint(5) unsigned NOT NULL DEFAULT 0,
   `hidden` smallint(5) unsigned NOT NULL DEFAULT 0,
   `starttime` int(10) unsigned NOT NULL DEFAULT 0,
@@ -898,7 +834,6 @@ CREATE TABLE `sys_redirect` (
   `pid` int(10) unsigned NOT NULL DEFAULT 0,
   `updatedon` int(10) unsigned NOT NULL DEFAULT 0,
   `createdon` int(10) unsigned NOT NULL DEFAULT 0,
-  `createdby` int(10) unsigned NOT NULL DEFAULT 0,
   `deleted` smallint(5) unsigned NOT NULL DEFAULT 0,
   `disabled` smallint(5) unsigned NOT NULL DEFAULT 0,
   `starttime` int(10) unsigned NOT NULL DEFAULT 0,
@@ -915,6 +850,8 @@ CREATE TABLE `sys_redirect` (
   `lasthiton` int(11) NOT NULL DEFAULT 0,
   `disable_hitcount` smallint(5) unsigned NOT NULL DEFAULT 0,
   `protected` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `description` text DEFAULT NULL,
+  `creation_type` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`uid`),
   KEY `index_source` (`source_host`(80),`source_path`(80)),
   KEY `parent` (`pid`,`deleted`,`disabled`)
@@ -964,16 +901,19 @@ CREATE TABLE `sys_refindex` (
 LOCK TABLES `sys_refindex` WRITE;
 /*!40000 ALTER TABLE `sys_refindex` DISABLE KEYS */;
 INSERT INTO `sys_refindex` VALUES
-('010c202f2e56751245ee57a853fa198f','tx_dlf_documents',1,'structure','','','',0,0,'tx_dlf_structures',48,''),
 ('0793c9e38dffebfe8dfc053629cb4af4','tx_dlf_metadataformat',40,'encoded','','','',0,0,'tx_dlf_formats',1,''),
 ('0bc75fc48a18f1b7592b49955076fe97','sys_file',6,'storage','','','',0,0,'sys_file_storage',1,''),
+('0bf363f198352c1f251386c0a559f6ac','sys_file',3,'metadata','','','',0,0,'sys_file_metadata',3,''),
 ('0db6802f0afc4882930a44762c93c606','tx_dlf_metadata',7,'format','','','',0,0,'tx_dlf_metadataformat',7,''),
 ('0f0a2ec215e990c20aec0c48bb580228','tx_dlf_metadata',14,'format','','','',2,0,'tx_dlf_metadataformat',27,''),
 ('0f3226269914484f4eebc8d2c55990bd','tx_dlf_metadataformat',14,'encoded','','','',0,0,'tx_dlf_formats',1,''),
 ('19e1d5ac731352030b3d44cc3ced2cb5','tx_dlf_metadata',10,'format','','','',1,0,'tx_dlf_metadataformat',16,''),
 ('1dbc126f48e17b9235b2f79bfb024be3','tx_dlf_metadata',17,'format','','','',1,0,'tx_dlf_metadataformat',32,''),
 ('1fce4061cace6416f6a6c7490cae547e','tx_dlf_metadata',29,'format','','','',0,0,'tx_dlf_metadataformat',43,''),
+('201dc1e0bfcfe2f0da28f73af08e60c0','sys_file_metadata',2,'file','','','',0,0,'sys_file',2,''),
+('25e173a9ef4043cf17c1f33b82cabd02','sys_template',1,'constants','','url','12',-1,0,'_STRING',0,'https://ddev-ddb-zeitungsportal-update.ddev.site/'),
 ('25f7ba29c2635712d78a4144c645b539','tx_dlf_metadata',20,'format','','','',2,0,'tx_dlf_metadataformat',38,''),
+('28522af34b08c632c912c2a268863e2d','sys_template',1,'config','','url','22',-1,0,'_STRING',0,'https://dev-ddb.fiz-karlsruhe.de/ddb-current/newspaper/item'),
 ('287e38a00b9e6b61536789dae3fe03bf','tx_dlf_metadataformat',46,'encoded','','','',0,0,'tx_dlf_formats',1,''),
 ('2888842c974cb5361d9ef8327fa5cc2d','tx_dlf_metadata',21,'format','','','',0,0,'tx_dlf_metadataformat',39,''),
 ('2c60ab818b8fd6c7237615b1c6c26ca6','tx_dlf_structures',94,'l18n_parent','','','',0,0,'tx_dlf_structures',93,''),
@@ -987,8 +927,6 @@ INSERT INTO `sys_refindex` VALUES
 ('3c399d871f9f131fbc364a505ab56bc3','tx_dlf_metadata',37,'format','','','',0,0,'tx_dlf_metadataformat',47,''),
 ('417513c20b7b7c848e002abb09eb2ff5','tx_dlf_metadataformat',36,'encoded','','','',0,0,'tx_dlf_formats',5,''),
 ('442b476f66e838001d9362cca78150e3','tx_dlf_metadata',9,'format','','','',1,0,'tx_dlf_metadataformat',14,''),
-('460f40df396301c42b9c08ac9bac9e12','tx_dlf_documents',1,'owner','','','',0,0,'tx_dlf_libraries',1,''),
-('4a2761996ee49c548ba995e6cd02dac5','tx_dlf_documents',2,'owner','','','',0,0,'tx_dlf_libraries',1,''),
 ('4a5e1a50501fb07c65b59f7f5bea717b','tx_dlf_metadata',9,'format','','','',0,0,'tx_dlf_metadataformat',13,''),
 ('4ab0871a0cc60aee31858b33c82abf35','tx_dlf_metadata',7,'format','','','',1,0,'tx_dlf_metadataformat',8,''),
 ('4b122484f33aef01fd6102bfb593cf89','tx_dlf_metadataformat',19,'encoded','','','',0,0,'tx_dlf_formats',1,''),
@@ -996,11 +934,11 @@ INSERT INTO `sys_refindex` VALUES
 ('4ede775469dbde8500407e15976a76b9','tx_dlf_metadata',31,'format','','','',0,0,'tx_dlf_metadataformat',44,''),
 ('4f36e42bb08a72b4cf80b3a4d520ebde','tx_dlf_metadata',14,'format','','','',1,0,'tx_dlf_metadataformat',26,''),
 ('51f0da7fa344d264c1f9ab42bbe41a23','tx_dlf_metadataformat',4,'encoded','','','',0,0,'tx_dlf_formats',1,''),
-('548c352283f7ff33d682a6e1218f19ab','sys_template',1,'constants','','url','12',-1,0,'_STRING',0,'https://ddev-ddb-zeitungsportal.ddev.site/'),
 ('54ea322e1799221d2c16f2d294ce0668','sys_template',1,'config','','url','17',-1,0,'_STRING',0,'https://api-q1.deutsche-digitale-bibliothek.de/items/*id*/source/record'),
 ('58ebe68a13f8d8a5386107460b78b4ad','tx_dlf_metadataformat',27,'encoded','','','',0,0,'tx_dlf_formats',1,''),
 ('5d3f5087eb1284df8a32c9a53fe87bd1','tx_dlf_metadata',28,'l18n_parent','','','',0,0,'tx_dlf_metadata',29,''),
 ('5da0b0320c16a37c96ed477e295fb84a','tx_dlf_metadataformat',12,'encoded','','','',0,0,'tx_dlf_formats',1,''),
+('5db7fc36686fe7f0613029d23a4e5915','sys_template',1,'config','','url','27',-1,0,'_STRING',0,'https://api.deutsche-digitale-bibliothek.de/items/*id*/source/record'),
 ('5fd57a85510344d53ae16dac0b81d40f','tx_dlf_metadata',26,'l18n_parent','','','',0,0,'tx_dlf_metadata',27,''),
 ('620780928bf80f18411eb74c39bc7439','tx_dlf_metadata',1,'format','','','',0,0,'tx_dlf_metadataformat',1,''),
 ('63355f9a8e07c72e94d73e9eddb987c4','tx_dlf_metadata',27,'format','','','',0,0,'tx_dlf_metadataformat',42,''),
@@ -1013,6 +951,7 @@ INSERT INTO `sys_refindex` VALUES
 ('72fa29eeb2e86e8a0772016ba46acce9','tx_dlf_metadataformat',6,'encoded','','','',0,0,'tx_dlf_formats',1,''),
 ('73a458082d19881a87db0ff2f86429c2','tx_dlf_metadataformat',11,'encoded','','','',0,0,'tx_dlf_formats',2,''),
 ('73ec1aa1e022699f80cf10e3234603e0','tx_dlf_metadataformat',42,'encoded','','','',0,0,'tx_dlf_formats',1,''),
+('749b0771828793d3e3eba1372852a7a8','sys_file',2,'metadata','','','',0,0,'sys_file_metadata',2,''),
 ('74a6369b82d50cbdea4417c202b06d4d','tx_dlf_metadataformat',8,'encoded','','','',0,0,'tx_dlf_formats',2,''),
 ('7618d6f6b41f5a436c729d931d7a516d','pages',3,'l10n_parent','','','',0,0,'pages',1,''),
 ('7646e561feefdaecf463e53b2dfabe48','tx_dlf_metadataformat',37,'encoded','','','',0,0,'tx_dlf_formats',2,''),
@@ -1026,19 +965,24 @@ INSERT INTO `sys_refindex` VALUES
 ('879acf76d594ba9d6170c6d65d5e77c8','tx_dlf_metadata',18,'format','','','',0,0,'tx_dlf_metadataformat',33,''),
 ('87cea1d8a374ddd434e7df0b9b90094e','tx_dlf_metadataformat',33,'encoded','','','',0,0,'tx_dlf_formats',5,''),
 ('897ff9f6d50e5af476509c56725227b0','tx_dlf_metadata',20,'format','','','',1,0,'tx_dlf_metadataformat',37,''),
+('8987893411baca05f986dca0a4c38bd8','sys_file',5,'metadata','','','',0,0,'sys_file_metadata',5,''),
 ('8c58f8f91b793b55494934169b9d80c7','sys_template',1,'constants','','url','17',-1,0,'_STRING',0,'https://dev-zpviewerdev.fiz-karlsruhe.de/'),
+('8d23731a2b2037f4781f89c5149c57be','sys_file_metadata',5,'file','','','',0,0,'sys_file',5,''),
 ('8f242c9bf2b01eb3aa92901d8bca3e9d','tx_dlf_metadataformat',17,'encoded','','','',0,0,'tx_dlf_formats',5,''),
 ('8fa2ff0688e23ce05d21093f320a5803','sys_template',1,'constants','','url','7',-1,0,'_STRING',0,'https://viewer-dzp.deutsche-digitale-bibliothek.de/'),
 ('8fc6082d26feea8290d686f89cff1c4b','tx_dlf_metadataformat',44,'encoded','','','',0,0,'tx_dlf_formats',1,''),
 ('9042dac4724481e65cc7f8848e3432f3','sys_template',1,'config','','url','12',-1,0,'_STRING',0,'https://dev-ddb.fiz-karlsruhe.de/ddb-current/newspaper/item'),
+('93004573d1d006a130ef069b9f27b1f9','sys_file',7,'storage','','','',0,0,'sys_file_storage',1,''),
 ('9333be3492bb5248ef628ff8177a5a5b','tx_dlf_metadataformat',5,'encoded','','','',0,0,'tx_dlf_formats',1,''),
 ('95853d7dde05fa611863ec4bf3029291','tx_dlf_metadata',16,'format','','','',1,0,'tx_dlf_metadataformat',30,''),
 ('9846abd554c3e65020457bd650c57028','tx_dlf_metadata',7,'format','','','',2,0,'tx_dlf_metadataformat',9,''),
 ('99c9f985dcfa7ab9704280830b2781b9','tx_dlf_metadata',11,'format','','','',1,0,'tx_dlf_metadataformat',18,''),
+('99de689fcc8d549c1edc8d615d5e37a0','sys_file_metadata',4,'file','','','',0,0,'sys_file',4,''),
 ('9a8eda1a3810d6dcc3874bf2a49b2853','tx_dlf_metadata',15,'format','','','',0,0,'tx_dlf_metadataformat',28,''),
 ('9af84ea11f2b0b3d0757b19f96971fdb','tx_dlf_metadata',25,'format','','','',0,0,'tx_dlf_metadataformat',41,''),
 ('9bc5b1614efe94d50c77a20c55c4db2a','tx_dlf_metadataformat',29,'encoded','','','',0,0,'tx_dlf_formats',5,''),
 ('9bdbb40747f27442edcf1cd6482e3e70','tx_dlf_metadata',20,'format','','','',0,0,'tx_dlf_metadataformat',36,''),
+('9cc3f820ab6a69459a9c2fc66a61f092','sys_file',6,'metadata','','','',0,0,'sys_file_metadata',6,''),
 ('9e4b2651f17f2aa35e73d3a123f7d2af','tx_dlf_metadata',38,'l18n_parent','','','',0,0,'tx_dlf_metadata',39,''),
 ('a1f46e12369ba73164fc36018b58e7cf','tx_dlf_metadata',14,'format','','','',0,0,'tx_dlf_metadataformat',25,''),
 ('a503903f43f511449c3e8ad0dc9752ca','tx_dlf_metadata',16,'format','','','',0,0,'tx_dlf_metadataformat',29,''),
@@ -1046,6 +990,7 @@ INSERT INTO `sys_refindex` VALUES
 ('a90abceb4dadedc2f707ce6fcf440ec7','tx_dlf_metadata',34,'l18n_parent','','','',0,0,'tx_dlf_metadata',35,''),
 ('aab8b631685c09f7efcd856c8732bdad','sys_template',1,'constants','','url','22',-1,0,'_STRING',0,'http://ddb-p2-vmzpviewer01:8001/zp-viewer'),
 ('ac071894f9308d84fae869fb6514506c','tx_dlf_metadata',32,'l18n_parent','','','',0,0,'tx_dlf_metadata',33,''),
+('adff59518c68b7c6e4dca65245b57aed','sys_file_metadata',3,'file','','','',0,0,'sys_file',3,''),
 ('b00a7893380aeb84876104cb03e4a121','tx_dlf_metadataformat',35,'encoded','','','',0,0,'tx_dlf_formats',1,''),
 ('b01e48a11d04a5acf9f9ab2e4f862294','tx_dlf_metadataformat',26,'encoded','','','',0,0,'tx_dlf_formats',2,''),
 ('b226294ac789e4644bb765ff58172fe1','tx_dlf_metadataformat',24,'encoded','','','',0,0,'tx_dlf_formats',1,''),
@@ -1053,10 +998,13 @@ INSERT INTO `sys_refindex` VALUES
 ('b4bc234e46ed74db4148415c2fa432f8','sys_template',1,'config','','url','2',-1,0,'_STRING',0,'https://dev-ddb.fiz-karlsruhe.de/ddb-current/newspaper/item'),
 ('b63de20fee359e9f32bc1752e026003f','tx_dlf_metadata',19,'format','','','',0,0,'tx_dlf_metadataformat',35,''),
 ('b733f1f1a19bcc4e5f3c623c10250be2','tx_dlf_metadataformat',47,'encoded','','','',0,0,'tx_dlf_formats',1,''),
+('ba8ec115beb88856361291bf87ff7c6d','sys_file_metadata',6,'file','','','',0,0,'sys_file',6,''),
 ('bab37143de5339e474516691bf0c5857','sys_file',4,'storage','','','',0,0,'sys_file_storage',1,''),
 ('bb27add24eadc31d28bbc421ef776019','tx_dlf_metadataformat',28,'encoded','','','',0,0,'tx_dlf_formats',1,''),
+('bb9038a252bcfeadc2e1e8a6b5266986','sys_file_metadata',1,'file','','','',0,0,'sys_file',1,''),
 ('bca7a540f2bfaa6950c7157fb9feb1dc','tx_dlf_metadataformat',41,'encoded','','','',0,0,'tx_dlf_formats',1,''),
 ('be8ce7071b9ef4d476eaaaf4f41fd2f8','sys_template',1,'constants','','url','2',-1,0,'_STRING',0,'https://sdvtypo3ddbzeitungsportaldev.slub-dresden.de/'),
+('bfa38cea3215058461072bbdefb9a1ad','sys_file_metadata',7,'file','','','',0,0,'sys_file',7,''),
 ('bfd4d4c37090ae7efa0589cdc03826aa','tx_dlf_metadataformat',13,'encoded','','','',0,0,'tx_dlf_formats',2,''),
 ('c3043e1babcffca64ed238e94b73dceb','tx_dlf_metadataformat',38,'encoded','','','',0,0,'tx_dlf_formats',1,''),
 ('c6e1c789dec12f8305ed04cacaf7dbd9','tx_dlf_metadata',8,'format','','','',1,0,'tx_dlf_metadataformat',11,''),
@@ -1072,12 +1020,12 @@ INSERT INTO `sys_refindex` VALUES
 ('dca02605db1e190d2f7f3bf61b54bdcb','tx_dlf_metadata',13,'format','','','',1,0,'tx_dlf_metadataformat',23,''),
 ('dd293be3b8c7d6d482d9de084261f775','tx_dlf_metadata',2,'format','','','',0,0,'tx_dlf_metadataformat',2,''),
 ('e0c6881d95d9ac441f3e4edb6e097b0c','tx_dlf_metadataformat',25,'encoded','','','',0,0,'tx_dlf_formats',5,''),
-('e1f83239363c1d8e24d8ee7dcc694942','tx_dlf_documents',2,'structure','','','',0,0,'tx_dlf_structures',34,''),
 ('e4c30a6e80bda0e19a3ab133be36073c','tx_dlf_metadata',30,'l18n_parent','','','',0,0,'tx_dlf_metadata',31,''),
 ('e4d3d6a901ad9af96300dbf6c23240b5','tx_dlf_metadata',8,'format','','','',0,0,'tx_dlf_metadataformat',10,''),
 ('e4de06b43464bf069823386f74af276f','tx_dlf_metadata',5,'format','','','',0,0,'tx_dlf_metadataformat',5,''),
 ('e5798aae4c39a006e3f8a86bf7574358','tx_dlf_metadata',11,'format','','','',2,0,'tx_dlf_metadataformat',19,''),
 ('e6cec14e44b6f83571e0ad8e53f08879','tx_dlf_metadataformat',32,'encoded','','','',0,0,'tx_dlf_formats',2,''),
+('ec01e9666331703a2215b40555f23bf6','sys_file',4,'metadata','','','',0,0,'sys_file_metadata',4,''),
 ('ed1b09d0f42f24bc8fce97bc9f8a07a8','tx_dlf_metadata',33,'format','','','',0,0,'tx_dlf_metadataformat',45,''),
 ('f183f916cc44df6c24aea3afa59ac010','tx_dlf_metadata',39,'format','','','',0,0,'tx_dlf_metadataformat',48,''),
 ('f3ac7ce19926112cae389e490a6b14ac','tx_dlf_metadata',17,'format','','','',0,0,'tx_dlf_metadataformat',31,''),
@@ -1086,7 +1034,9 @@ INSERT INTO `sys_refindex` VALUES
 ('fb727e59fa4f911b56dd3e568551e91a','tx_dlf_metadataformat',9,'encoded','','','',0,0,'tx_dlf_formats',1,''),
 ('fbf85f305f8689f407fffef0cc4a0a49','tx_dlf_metadataformat',20,'encoded','','','',0,0,'tx_dlf_formats',2,''),
 ('fc6523e8f4ca9c81a2187ad1d92e5759','tx_dlf_metadataformat',22,'encoded','','','',0,0,'tx_dlf_formats',5,''),
-('ff56fc02246f13e0740ec8a26cb3f31d','tx_dlf_metadata',13,'format','','','',0,0,'tx_dlf_metadataformat',22,'');
+('fe80a6589cac9798aa13ab5e0192cb56','sys_file',1,'metadata','','','',0,0,'sys_file_metadata',1,''),
+('ff56fc02246f13e0740ec8a26cb3f31d','tx_dlf_metadata',13,'format','','','',0,0,'tx_dlf_metadataformat',22,''),
+('ffae3457a86e31ff3e84e22fec53eb1d','sys_file',7,'metadata','','','',0,0,'sys_file_metadata',7,'');
 /*!40000 ALTER TABLE `sys_refindex` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1104,7 +1054,7 @@ CREATE TABLE `sys_registry` (
   `entry_value` mediumblob DEFAULT NULL,
   PRIMARY KEY (`uid`),
   UNIQUE KEY `entry_identifier` (`entry_namespace`,`entry_key`)
-) ENGINE=InnoDB AUTO_INCREMENT=2115 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2129 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1144,11 +1094,11 @@ INSERT INTO `sys_registry` VALUES
 (28,'installUpdate','TYPO3\\CMS\\Install\\Updates\\Argon2iPasswordHashes','i:1;'),
 (29,'installUpdate','TYPO3\\CMS\\Install\\Updates\\BackendUserConfigurationUpdate','i:1;'),
 (30,'installUpdate','TYPO3\\CMS\\Install\\Updates\\SvgFilesSanitization','i:1;'),
-(31,'installUpdateRows','rowUpdatersDone','a:7:{i:0;s:52:\"TYPO3\\CMS\\Install\\Updates\\RowUpdater\\L10nModeUpdater\";i:1;s:53:\"TYPO3\\CMS\\Install\\Updates\\RowUpdater\\ImageCropUpdater\";i:2;s:57:\"TYPO3\\CMS\\Install\\Updates\\RowUpdater\\RteLinkSyntaxUpdater\";i:3;s:69:\"TYPO3\\CMS\\Install\\Updates\\RowUpdater\\WorkspaceVersionRecordsMigration\";i:4;s:66:\"TYPO3\\CMS\\Install\\Updates\\RowUpdater\\L18nDiffsourceToJsonMigration\";i:5;s:77:\"TYPO3\\CMS\\Install\\Updates\\RowUpdater\\WorkspaceMovePlaceholderRemovalMigration\";i:6;s:76:\"TYPO3\\CMS\\Install\\Updates\\RowUpdater\\WorkspaceNewPlaceholderRemovalMigration\";}'),
+(31,'installUpdateRows','rowUpdatersDone','a:8:{i:0;s:52:\"TYPO3\\CMS\\Install\\Updates\\RowUpdater\\L10nModeUpdater\";i:1;s:53:\"TYPO3\\CMS\\Install\\Updates\\RowUpdater\\ImageCropUpdater\";i:2;s:57:\"TYPO3\\CMS\\Install\\Updates\\RowUpdater\\RteLinkSyntaxUpdater\";i:3;s:69:\"TYPO3\\CMS\\Install\\Updates\\RowUpdater\\WorkspaceVersionRecordsMigration\";i:4;s:66:\"TYPO3\\CMS\\Install\\Updates\\RowUpdater\\L18nDiffsourceToJsonMigration\";i:5;s:77:\"TYPO3\\CMS\\Install\\Updates\\RowUpdater\\WorkspaceMovePlaceholderRemovalMigration\";i:6;s:76:\"TYPO3\\CMS\\Install\\Updates\\RowUpdater\\WorkspaceNewPlaceholderRemovalMigration\";i:7;s:69:\"TYPO3\\CMS\\Install\\Updates\\RowUpdater\\SysRedirectRootPageMoveMigration\";}'),
 (32,'core','formProtectionSessionToken:1',NULL),
 (33,'languagePacks','baseUrl','s:33:\"https://localize.typo3.org/xliff/\";'),
 (34,'extensionDataImport','typo3conf/ext/dlf/ext_tables_static+adt.sql','s:0:\"\";'),
-(209,'core','sys_refindex_lastUpdate','i:1719335620;'),
+(209,'core','sys_refindex_lastUpdate','i:1733417672;'),
 (443,'installUpdate','TYPO3\\CMS\\Install\\Updates\\RsaauthExtractionUpdate','i:1;'),
 (444,'installUpdate','TYPO3\\CMS\\Install\\Updates\\FeeditExtractionUpdate','i:1;'),
 (445,'installUpdate','TYPO3\\CMS\\Install\\Updates\\TaskcenterExtractionUpdate','i:1;'),
@@ -1156,14 +1106,13 @@ INSERT INTO `sys_registry` VALUES
 (447,'installUpdate','TYPO3\\CMS\\Felogin\\Updates\\MigrateFeloginPlugins','i:1;'),
 (448,'installUpdate','Kitodo\\Dlf\\Updates\\MigrateSettings','i:1;'),
 (449,'installUpdate','Kitodo\\Dlf\\Updates\\FileLocationUpdater','i:1;'),
-(682,'languagePacks','de-dlf','i:1719236534;'),
-(683,'languagePacks','de','i:1719236536;'),
+(682,'languagePacks','de-dlf','i:1733168816;'),
+(683,'languagePacks','de','i:1733168819;'),
 (1149,'installUpdate','TYPO3\\CMS\\Install\\Updates\\ShortcutRecordsMigration','i:1;'),
 (1150,'installUpdate','TYPO3\\CMS\\Install\\Updates\\CollectionsExtractionUpdate','i:1;'),
 (1151,'installUpdate','TYPO3\\CMS\\FrontendLogin\\Updates\\MigrateFeloginPlugins','i:1;'),
 (1152,'installUpdate','TYPO3\\CMS\\Install\\Updates\\SysLogChannel','i:1;'),
 (1153,'installUpdate','TYPO3\\CMS\\Install\\Updates\\BackendUserLanguageMigration','i:1;'),
-(1792,'core','formProtectionSessionToken:3','s:64:\"2df4f1cb1ff15b9ede848e6e0f259f8611bec67686e213c578bacca79b9baa2e\";'),
 (1793,'extensionScannerNotAffected','9aa93b9277a65f284b5f77ebc3d79435','s:32:\"9aa93b9277a65f284b5f77ebc3d79435\";'),
 (1794,'extensionScannerNotAffected','e9cf64ee9da1d5e62168bd794df2247d','s:32:\"e9cf64ee9da1d5e62168bd794df2247d\";'),
 (1795,'extensionScannerNotAffected','8280e3513619dfe238c096f653be5302','s:32:\"8280e3513619dfe238c096f653be5302\";'),
@@ -1485,7 +1434,19 @@ INSERT INTO `sys_registry` VALUES
 (2111,'extensionScannerNotAffected','b2fa6c9a867bec6bcefb002d22caa81d','s:32:\"b2fa6c9a867bec6bcefb002d22caa81d\";'),
 (2112,'extensionScannerNotAffected','3b2bf7afff81e5d27fe73b7efaa53850','s:32:\"3b2bf7afff81e5d27fe73b7efaa53850\";'),
 (2113,'extensionScannerNotAffected','dcb6c1625fa3f587a61ace48093f8513','s:32:\"dcb6c1625fa3f587a61ace48093f8513\";'),
-(2114,'extensionScannerNotAffected','db7b14433498a1befb8c85c227714269','s:32:\"db7b14433498a1befb8c85c227714269\";');
+(2114,'extensionScannerNotAffected','db7b14433498a1befb8c85c227714269','s:32:\"db7b14433498a1befb8c85c227714269\";'),
+(2115,'tx_reports','status.highestSeverity','i:1;'),
+(2118,'installUpdate','TYPO3\\CMS\\Install\\Updates\\PasswordPolicyForFrontendUsersUpdate','i:1;'),
+(2119,'installUpdate','TYPO3\\CMS\\Install\\Updates\\BackendGroupsExplicitAllowDenyMigration','i:1;'),
+(2120,'installUpdate','TYPO3\\CMS\\Install\\Updates\\BackendModulePermissionMigration','i:1;'),
+(2121,'installUpdate','TYPO3\\CMS\\Install\\Updates\\FeLoginModeExtractionUpdate','i:1;'),
+(2122,'installUpdate','TYPO3\\CMS\\Install\\Updates\\MigrateSiteSettingsConfigUpdate','i:1;'),
+(2123,'installUpdate','TYPO3\\CMS\\Install\\Updates\\SysFileCollectionIdentifierMigration','i:1;'),
+(2124,'installUpdate','TYPO3\\CMS\\Install\\Updates\\SysFileMountIdentifierMigration','i:1;'),
+(2125,'installUpdate','TYPO3\\CMS\\Install\\Updates\\SysLogSerializationUpdate','i:1;'),
+(2126,'installUpdate','TYPO3\\CMS\\Install\\Updates\\SysTemplateNoWorkspaceMigration','i:1;'),
+(2127,'installUpdate','Kitodo\\Dlf\\Updates\\UpdateSolrSchema','i:1;'),
+(2128,'core','formProtectionSessionToken:3','s:64:\"a184804516bdeaabd8a7abd7b239dd04e81f04f2b710f2d265f59377300cc453\";');
 /*!40000 ALTER TABLE `sys_registry` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1498,10 +1459,9 @@ DROP TABLE IF EXISTS `sys_template`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `sys_template` (
   `uid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `pid` int(11) NOT NULL DEFAULT 0,
+  `pid` int(10) unsigned NOT NULL DEFAULT 0,
   `tstamp` int(10) unsigned NOT NULL DEFAULT 0,
   `crdate` int(10) unsigned NOT NULL DEFAULT 0,
-  `cruser_id` int(10) unsigned NOT NULL DEFAULT 0,
   `deleted` smallint(5) unsigned NOT NULL DEFAULT 0,
   `hidden` smallint(5) unsigned NOT NULL DEFAULT 0,
   `starttime` int(10) unsigned NOT NULL DEFAULT 0,
@@ -1509,10 +1469,6 @@ CREATE TABLE `sys_template` (
   `sorting` int(11) NOT NULL DEFAULT 0,
   `description` text DEFAULT NULL,
   `t3_origuid` int(10) unsigned NOT NULL DEFAULT 0,
-  `t3ver_oid` int(10) unsigned NOT NULL DEFAULT 0,
-  `t3ver_wsid` int(10) unsigned NOT NULL DEFAULT 0,
-  `t3ver_state` smallint(6) NOT NULL DEFAULT 0,
-  `t3ver_stage` int(11) NOT NULL DEFAULT 0,
   `title` varchar(255) NOT NULL DEFAULT '',
   `root` smallint(5) unsigned NOT NULL DEFAULT 0,
   `clear` smallint(5) unsigned NOT NULL DEFAULT 0,
@@ -1525,8 +1481,7 @@ CREATE TABLE `sys_template` (
   `tx_impexp_origuid` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`uid`),
   KEY `roottemplate` (`deleted`,`hidden`,`root`),
-  KEY `parent` (`pid`,`deleted`,`hidden`),
-  KEY `t3ver_oid` (`t3ver_oid`,`t3ver_wsid`)
+  KEY `parent` (`pid`,`deleted`,`hidden`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -1537,7 +1492,7 @@ CREATE TABLE `sys_template` (
 LOCK TABLES `sys_template` WRITE;
 /*!40000 ALTER TABLE `sys_template` DISABLE KEYS */;
 INSERT INTO `sys_template` VALUES
-(1,1,1731068437,1628488695,1,0,0,0,0,256,NULL,0,0,0,0,0,'Viewer',1,3,'EXT:dlf/Configuration/TypoScript/Toolbox/,EXT:ddb_kitodo_zeitungsportal/Configuration/TypoScript','constant {\r\n  # id of configuration directory (Kitodo Konfiguration)\r\n  configPid = 2\r\n  # id of Viewer page\r\n  viewerPid = 4\r\n  # id of Solr Core\r\n  solrCore = 7\n  #page url on which viewer will be visible\r\n  #baseUrl = https://sdvtypo3ddbzeitungsportaldev.slub-dresden.de/\r\n  #baseUrl = https://viewer-dzp.deutsche-digitale-bibliothek.de/\r\n  baseUrl = https://ddev-ddb-zeitungsportal.ddev.site/\r\n  #baseUrl = https://dev-zpviewerdev.fiz-karlsruhe.de/\r\n  #baseUrl = http://ddb-p2-vmzpviewer01:8001/zp-viewer\r\n}','# dev\r\n#plugin.tx_dlf_searchindocumenttool.settings.searchUrl = https://dev-ddb.fiz-karlsruhe.de/ddb-current/newspaper/item\r\n#plugin.tx_dlf_searchindocumenttool.settings.documentIdUrlSchema = https://dev-ddb.fiz-karlsruhe.de/api/items/*id*/source/record\r\n\r\n# master\r\n#plugin.tx_dlf_searchindocumenttool.searchUrl = https://dev-ddb.fiz-karlsruhe.de/ddb-current/newspaper/item\r\n#plugin.tx_dlf_searchindocumenttool.documentIdUrlSchema = https://api-q1.deutsche-digitale-bibliothek.de/items/*id*/source/record\r\n\r\n','',0,0,0);
+(1,1,1736512376,1628488695,0,0,0,0,256,NULL,0,'Viewer',1,3,'EXT:dlf/Configuration/TypoScript/Toolbox/,EXT:ddb_kitodo_zeitungsportal/Configuration/TypoScript','constant {\r\n  # id of configuration directory (Kitodo Konfiguration)\r\n  configPid = 2\r\n  # id of Viewer page\r\n  viewerPid = 4\r\n  # id of Solr Core\r\n  solrCore = 1\r\n  #page url on which viewer will be visible\r\n  #baseUrl = https://sdvtypo3ddbzeitungsportaldev.slub-dresden.de/\r\n  #baseUrl = https://viewer-dzp.deutsche-digitale-bibliothek.de/\r\n  baseUrl = https://ddev-ddb-zeitungsportal-update.ddev.site/\r\n  #baseUrl = https://dev-zpviewerdev.fiz-karlsruhe.de/\r\n  #baseUrl = http://ddb-p2-vmzpviewer01:8001/zp-viewer\r\n}','# dev\r\n#plugin.tx_dlf_searchindocumenttool.settings.searchUrl = https://dev-ddb.fiz-karlsruhe.de/ddb-current/newspaper/item\r\n#plugin.tx_dlf_searchindocumenttool.settings.documentIdUrlSchema = https://dev-ddb.fiz-karlsruhe.de/api/items/*id*/source/record\r\n\r\n# master\r\n#plugin.tx_dlf_searchindocumenttool.settings.searchUrl = https://dev-ddb.fiz-karlsruhe.de/ddb-current/newspaper/item\r\n#plugin.tx_dlf_searchindocumenttool.settings.documentIdUrlSchema = https://api-q1.deutsche-digitale-bibliothek.de/items/*id*/source/record\r\n\r\n# update 2024\r\nplugin.tx_dlf_searchindocumenttool.settings.searchUrl = https://dev-ddb.fiz-karlsruhe.de/ddb-current/newspaper/item\r\nplugin.tx_dlf_searchindocumenttool.settings.documentIdUrlSchema = https://api.deutsche-digitale-bibliothek.de/items/*id*/source/record','',0,0,0);
 /*!40000 ALTER TABLE `sys_template` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1551,10 +1506,9 @@ DROP TABLE IF EXISTS `tt_content`;
 CREATE TABLE `tt_content` (
   `uid` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `rowDescription` text DEFAULT NULL,
-  `pid` int(11) NOT NULL DEFAULT 0,
+  `pid` int(10) unsigned NOT NULL DEFAULT 0,
   `tstamp` int(10) unsigned NOT NULL DEFAULT 0,
   `crdate` int(10) unsigned NOT NULL DEFAULT 0,
-  `cruser_id` int(10) unsigned NOT NULL DEFAULT 0,
   `deleted` smallint(5) unsigned NOT NULL DEFAULT 0,
   `hidden` smallint(5) unsigned NOT NULL DEFAULT 0,
   `starttime` int(10) unsigned NOT NULL DEFAULT 0,
@@ -1606,7 +1560,7 @@ CREATE TABLE `tt_content` (
   `filelink_sorting` varchar(64) NOT NULL DEFAULT '',
   `filelink_sorting_direction` varchar(4) NOT NULL DEFAULT '',
   `target` varchar(30) NOT NULL DEFAULT '',
-  `date` int(10) unsigned NOT NULL DEFAULT 0,
+  `date` int(11) NOT NULL DEFAULT 0,
   `recursive` smallint(5) unsigned NOT NULL DEFAULT 0,
   `imageheight` int(10) unsigned NOT NULL DEFAULT 0,
   `pi_flexform` mediumtext DEFAULT NULL,
@@ -1689,7 +1643,7 @@ CREATE TABLE `tx_dlf_basket` (
   `l10n_state` text DEFAULT NULL,
   `fe_user_id` int(11) NOT NULL DEFAULT 0,
   `label` varchar(255) NOT NULL DEFAULT '',
-  `session_id` varchar(32) NOT NULL DEFAULT '',
+  `session_id` varchar(190) NOT NULL DEFAULT '',
   `doc_ids` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`uid`),
   KEY `parent` (`pid`),
@@ -1817,13 +1771,6 @@ CREATE TABLE `tx_dlf_documents` (
 
 LOCK TABLES `tx_dlf_documents` WRITE;
 /*!40000 ALTER TABLE `tx_dlf_documents` DISABLE KEYS */;
-INSERT INTO `tx_dlf_documents` VALUES
-(1,2,1731069051,1723725151,0,0,0,0,0,'','','https://api.deutsche-digitale-bibliothek.de/items/72OLPWCWDFDG7AVAYDDVJGMYRMZWBHDR/source/record','st10137','','','','http://fes.imageware.de/fes/web/index.html?open=st10137','Sozialdemokrat Test','','','1930-06-12','Prag','https://library.fes.de/ddb/st10137/st10137_01_thumb.jpg',48,0,'10','10','','','','','',0,'10 137, 12.06.1930','1930-06-12',1,7,0,'METS'),
-(2,2,1731068644,1730309640,0,0,0,0,0,'','','https://digital.slub-dresden.de/data/kitodo/SchDo_480520429-18891116/SchDo_480520429-18891116_anchor.xml','oai:de:slub-dresden:db:id-480520429','','','urn:nbn:de:bsz:14-db-id4805204290','http://digital.slub-dresden.de/id480520429','Sächsische Dorfzeitung','Sächsische Dorfzeitung','','','Dresden-Neustadt','',34,0,'','','','','','','',0,'Sächsische Dorfzeitung','Sächsische Dorfzeitung',1,7,0,'METS'),
-(3,2,1730912582,1730309640,0,1,0,0,0,'','','https://digital.slub-dresden.de/data/kitodo/SchDo_480520429-18891116/SchDo_480520429-18891116_year.xml','oai:de:slub-dresden:db:id-480520429-1889','','','urn:nbn:de:bsz:14-db-id480520429-18897','http://digital.slub-dresden.de/id480520429-1889','','','','','','',1,2,'','','','','','','',0,'','1889',1,4,0,'METS'),
-(4,2,1730912591,1730309640,0,1,0,0,0,'','','https://api.deutsche-digitale-bibliothek.de/items/WSGSC3P73OTKV2KDNUKAMYIZZW3BJ2T3/source/record','oai:de:slub-dresden:db:id-480520429-18891116','','','urn:nbn:de:bsz:14-db-id480520429-188911164','http://digital.slub-dresden.de/id480520429-18891116','','','','1889-11-16','Dresden','https://digital.slub-dresden.de/data/kitodo/SchDo_480520429-18891116/SchDo_480520429-18891116_tif/jpegs/00000001.tif.thumbnail.jpg',48,3,'16. November 1889','16. November 1889','http://creativecommons.org/publicdomain/mark/1.0/','','http://purl.org/coar/access_right/c_abf2/','','',0,'','',1,4,0,'METS'),
-(5,2,1731068644,1731068644,0,0,0,0,0,'','','https://digital.slub-dresden.de/data/kitodo/SchDo_480520429-18891116/SchDo_480520429-18891116_year.xml','oai:de:slub-dresden:db:id-480520429-1889','','','urn:nbn:de:bsz:14-db-id480520429-18897','http://digital.slub-dresden.de/id480520429-1889','','','','','','',1,2,'','','','','','','',0,'','1889',1,7,0,'METS'),
-(6,2,1731068644,1731068644,0,0,0,0,0,'','','https://api.deutsche-digitale-bibliothek.de/items/WSGSC3P73OTKV2KDNUKAMYIZZW3BJ2T3/source/record','oai:de:slub-dresden:db:id-480520429-18891116','','','urn:nbn:de:bsz:14-db-id480520429-188911164','http://digital.slub-dresden.de/id480520429-18891116','','','','1889-11-16','Dresden','https://digital.slub-dresden.de/data/kitodo/SchDo_480520429-18891116/SchDo_480520429-18891116_tif/jpegs/00000001.tif.thumbnail.jpg',48,5,'16. November 1889','16. November 1889','http://creativecommons.org/publicdomain/mark/1.0/','','http://purl.org/coar/access_right/c_abf2/','','',0,'','',1,7,0,'METS');
 /*!40000 ALTER TABLE `tx_dlf_documents` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2000,7 +1947,7 @@ INSERT INTO `tx_dlf_metadata` VALUES
 (4,2,1628486790,1628486790,1,0,0,0,'{\"label\":null,\"index_name\":null,\"format\":null,\"default_value\":null,\"wrap\":null,\"index_tokenized\":null,\"index_stored\":null,\"index_indexed\":null,\"index_boost\":null,\"is_sortable\":null,\"is_facet\":null,\"is_listed\":null,\"index_autocomplete\":null,\"sys_language_uid\":null}',0,1056,NULL,'Terms of Use','terms',1,'','key.wrap = <dt>|</dt>\nvalue.required = 1\nvalue.wrap = <dd>|</dd>',0,1,1,1,0,1,0,0,0),
 (5,2,1628486790,1628486790,1,0,0,0,'{\"label\":null,\"index_name\":null,\"format\":null,\"default_value\":null,\"wrap\":null,\"index_tokenized\":null,\"index_stored\":null,\"index_indexed\":null,\"index_boost\":null,\"is_sortable\":null,\"is_facet\":null,\"is_listed\":null,\"index_autocomplete\":null,\"sys_language_uid\":null}',0,1040,NULL,'License','license',1,'','key.wrap = <dt>|</dt>\nvalue.required = 1\nvalue.wrap = <dd>|</dd>',0,1,1,1,0,1,0,0,0),
 (6,2,1628486790,1628486790,1,0,0,0,'{\"label\":null,\"index_name\":null,\"format\":null,\"default_value\":null,\"wrap\":null,\"index_tokenized\":null,\"index_stored\":null,\"index_indexed\":null,\"index_boost\":null,\"is_sortable\":null,\"is_facet\":null,\"is_listed\":null,\"index_autocomplete\":null,\"sys_language_uid\":null}',0,1032,NULL,'Coordinates','coordinates',1,'','key.wrap = <dt>|</dt>\nvalue.required = 1\nvalue.wrap = <dd>|</dd>',0,1,1,1,0,0,0,0,0),
-(7,2,1628486790,1628486790,1,0,0,0,'{\"label\":null,\"index_name\":null,\"format\":null,\"default_value\":null,\"wrap\":null,\"index_tokenized\":null,\"index_stored\":null,\"index_indexed\":null,\"index_boost\":null,\"is_sortable\":null,\"is_facet\":null,\"is_listed\":null,\"index_autocomplete\":null,\"sys_language_uid\":null}',0,1028,NULL,'Kitodo Process Number','prod_id',3,'','key.wrap = <dt>|</dt>\nvalue.required = 1\nvalue.wrap = <dd>|</dd>',0,0,0,0,0,0,0,0,0),
+(7,2,1733161585,1628486790,1,0,0,0,'{\"label\":\"\",\"index_name\":\"\",\"index_tokenized\":\"\",\"index_stored\":\"\",\"index_indexed\":\"\",\"index_boost\":\"\",\"is_sortable\":\"\",\"is_facet\":\"\",\"is_listed\":\"\",\"index_autocomplete\":\"\",\"format\":\"\",\"default_value\":\"\",\"wrap\":\"\",\"sys_language_uid\":\"\",\"hidden\":\"\",\"status\":\"\"}',0,1028,NULL,'Kitodo Process Number','prod_id',3,'','key.wrap = <dt>|</dt>\r\nvalue.required = 1\r\nvalue.wrap = <dd>|</dd>',0,0,0,0,0,0,0,0,0),
 (8,2,1628486790,1628486790,1,0,0,0,'{\"label\":null,\"index_name\":null,\"format\":null,\"default_value\":null,\"wrap\":null,\"index_tokenized\":null,\"index_stored\":null,\"index_indexed\":null,\"index_boost\":null,\"is_sortable\":null,\"is_facet\":null,\"is_listed\":null,\"index_autocomplete\":null,\"sys_language_uid\":null}',0,1026,NULL,'OAI Identifier','record_id',3,'','key.wrap = <dt>|</dt>\nvalue.required = 1\nvalue.wrap = <dd>|</dd>',0,0,1,1,0,0,0,0,0),
 (9,2,1628486790,1628486790,1,0,0,0,'{\"label\":null,\"index_name\":null,\"format\":null,\"default_value\":null,\"wrap\":null,\"index_tokenized\":null,\"index_stored\":null,\"index_indexed\":null,\"index_boost\":null,\"is_sortable\":null,\"is_facet\":null,\"is_listed\":null,\"index_autocomplete\":null,\"sys_language_uid\":null}',0,1025,NULL,'Union Catalog ID','union_id',2,'','key.wrap = <dt>|</dt>\nvalue.required = 1\nvalue.wrap = <dd>|</dd>',0,0,1,1,0,0,0,0,0),
 (10,2,1628486790,1628486790,1,0,0,0,'{\"label\":null,\"index_name\":null,\"format\":null,\"default_value\":null,\"wrap\":null,\"index_tokenized\":null,\"index_stored\":null,\"index_indexed\":null,\"index_boost\":null,\"is_sortable\":null,\"is_facet\":null,\"is_listed\":null,\"index_autocomplete\":null,\"sys_language_uid\":null}',0,1024,NULL,'OPAC Identifier','opac_id',2,'','key.wrap = <dt>|</dt>\nvalue.required = 1\nvalue.wrap = <dd>|</dd>',0,0,1,1,0,0,0,0,0),
@@ -2076,9 +2023,9 @@ INSERT INTO `tx_dlf_metadataformat` VALUES
 (4,2,1628486790,1628486790,1,0,4,1,'./mods:accessCondition[@type=\"local terms of use\"]/@xlink:href','',0,NULL,0),
 (5,2,1628486790,1628486790,1,0,5,1,'./mods:accessCondition[@type=\"use and reproduction\"]/@xlink:href','',0,NULL,0),
 (6,2,1628486790,1628486790,1,0,6,1,'./mods:subject/mods:cartographics/mods:coordinates','',0,NULL,0),
-(7,2,1628486790,1628486790,1,0,7,5,'$.metadata.[?(@.label==\'Kitodo\')].value','',0,NULL,0),
-(8,2,1628486790,1628486790,1,0,7,2,'./teihdr:fileDesc/teihdr:publicationStmt/teihdr:idno[@type=\"kitodo\"]','',0,NULL,0),
-(9,2,1628486790,1628486790,1,0,7,1,'./mods:identifier[@type=\"kitodo\"]','',0,NULL,0),
+(7,2,1733161585,1628486790,1,0,7,5,'$.metadata.[?(@.label==\'Kitodo\')].value','',0,NULL,0),
+(8,2,1733161585,1628486790,1,0,7,2,'./teihdr:fileDesc/teihdr:publicationStmt/teihdr:idno[@type=\"kitodo\"]','',0,NULL,0),
+(9,2,1733161585,1628486790,1,0,7,1,'./mods:identifier[@type=\"kitodo\"]','',0,NULL,0),
 (10,2,1628486790,1628486790,1,0,8,5,'$[\'@id\']','',0,NULL,0),
 (11,2,1628486790,1628486790,1,0,8,2,'./teihdr:fileDesc/teihdr:publicationStmt/teihdr:idno[@type=\"recordIdentifier\"]','',0,NULL,0),
 (12,2,1628486790,1628486790,1,0,8,1,'./mods:recordInfo/mods:recordIdentifier','',0,NULL,0),
@@ -2152,7 +2099,7 @@ CREATE TABLE `tx_dlf_metadatasubentries` (
   KEY `parent_id` (`parent_id`),
   KEY `language` (`l18n_parent`,`sys_language_uid`),
   KEY `index_name` (`index_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2251,12 +2198,8 @@ CREATE TABLE `tx_dlf_solrcores` (
 LOCK TABLES `tx_dlf_solrcores` WRITE;
 /*!40000 ALTER TABLE `tx_dlf_solrcores` DISABLE KEYS */;
 INSERT INTO `tx_dlf_solrcores` VALUES
-(1,2,1723559880,0,0,1,'newspaper-issues','newspaper-issues'),
-(3,2,1723645677,1723639805,3,1,'dlfCore0_shard1_replica_n1',''),
-(4,2,1731066790,1723712510,0,1,'dlfCore0','dlfCore0'),
-(5,0,1730902744,1730901947,3,1,'dlfCore0',''),
-(6,0,1730902846,1730902791,3,1,'dlfCore0','dlfCore1'),
-(7,2,1731067553,1731067553,0,0,'Solr Kern (PID 2)','dlfCore0');
+(1,2,1733231675,1731067552,0,0,'newspaper-issues','newspaper-issues'),
+(7,2,1736512184,1731067553,0,0,'dlfCore0','dlfCore0');
 /*!40000 ALTER TABLE `tx_dlf_solrcores` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2410,7 +2353,6 @@ CREATE TABLE `tx_dlf_tokens` (
   `ident` varchar(30) NOT NULL DEFAULT '',
   `pid` int(11) NOT NULL DEFAULT 0,
   `crdate` int(10) unsigned NOT NULL DEFAULT 0,
-  `cruser_id` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`uid`),
   KEY `token` (`token`),
   KEY `parent` (`pid`)
@@ -2446,7 +2388,7 @@ CREATE TABLE `tx_extensionmanager_domain_model_extension` (
   `state` int(11) NOT NULL DEFAULT 0,
   `review_state` int(11) NOT NULL DEFAULT 0,
   `category` int(11) NOT NULL DEFAULT 0,
-  `last_updated` int(10) unsigned NOT NULL DEFAULT 0,
+  `last_updated` int(11) NOT NULL DEFAULT 0,
   `serialized_dependencies` mediumtext DEFAULT NULL,
   `author_name` varchar(255) NOT NULL DEFAULT '',
   `author_email` varchar(255) NOT NULL DEFAULT '',
@@ -2510,6 +2452,37 @@ LOCK TABLES `tx_impexp_presets` WRITE;
 /*!40000 ALTER TABLE `tx_impexp_presets` DISABLE KEYS */;
 /*!40000 ALTER TABLE `tx_impexp_presets` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `tx_scheduler_task_group`
+--
+
+DROP TABLE IF EXISTS `tx_scheduler_task_group`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tx_scheduler_task_group` (
+  `uid` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `pid` int(10) unsigned NOT NULL DEFAULT 0,
+  `tstamp` int(10) unsigned NOT NULL DEFAULT 0,
+  `crdate` int(10) unsigned NOT NULL DEFAULT 0,
+  `deleted` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `hidden` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `sorting` int(11) NOT NULL DEFAULT 0,
+  `groupName` varchar(80) NOT NULL DEFAULT '',
+  `description` text DEFAULT NULL,
+  PRIMARY KEY (`uid`),
+  KEY `parent` (`pid`,`deleted`,`hidden`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tx_scheduler_task_group`
+--
+
+LOCK TABLES `tx_scheduler_task_group` WRITE;
+/*!40000 ALTER TABLE `tx_scheduler_task_group` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tx_scheduler_task_group` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -2519,3 +2492,5 @@ UNLOCK TABLES;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2025-02-05 15:46:51
