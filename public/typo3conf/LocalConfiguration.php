@@ -60,6 +60,7 @@ return [
             'indexAnnotations' => '0',
             'solr' => [
                 'allowCoreDelete' => '0',
+                'connect' => '0',
                 'fields' => [
                     'autocomplete' => 'autocomplete',
                     'collection' => 'collection',
@@ -88,7 +89,7 @@ return [
                     'urn' => 'urn',
                     'volume' => 'volume',
                 ],
-                'host' => 'api-q1.deutsche-digitale-bibliothek.de',
+                'host' => 'api.deutsche-digitale-bibliothek.de',
                 'https' => '1',
                 'pass' => '',
                 'path' => '/',

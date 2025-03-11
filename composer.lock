@@ -1561,7 +1561,7 @@
             "dist": {
                 "type": "path",
                 "url": "public/typo3conf/ext/dlf",
-                "reference": "481c96ba8a671d8d802a180bd2c0ea1ff002860b"
+                "reference": "33603fbbbc6bc73698792f806c4f445f228f197d"
             },
             "require": {
                 "caseyamcl/phpoaipmh": "^3.3",
@@ -2618,7 +2618,7 @@
             "dist": {
                 "type": "path",
                 "url": "public/typo3conf/ext/ddb_kitodo_zeitungsportal",
-                "reference": "a646d8bef0fab13267b4d78e8e1f30ba09b33d40"
+                "reference": "07e1b59c2eb70ca5a531260306c85d1c31101ac5"
             },
             "require": {
                 "kitodo/presentation": "~5.0.0",
